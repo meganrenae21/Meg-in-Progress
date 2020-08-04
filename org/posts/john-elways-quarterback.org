@@ -1,0 +1,51 @@
+#+SETUPFILE: ~/Meg in Progress/org-templates/level-1.org
+
+#+BEGIN_EXPORT html
+<div id="mip-top">
+<div id="mip-header"><a href="../index.html"><h1>Meg in Progress</h1></a></div>
+<div id="topnav">
+<div id="navlink-1"><a href="../about.html">about</a></div>
+<div id="navlink-2"><a href="../work.html">my work</a></div>
+<div id="navlink-3"><a href="../social.html">social</a></div>
+</div>
+#+END_EXPORT
+
+
+#+TITLE: John Elway's Quarterback
+#+CATEGORY: wikipedia
+#+FILENAME: john-elways-quarterback
+#+DATE: 08/01/2020
+#+EXCERPT: /John Elway's Quarterback/, also known as /John Elway's Quarterback Challenge/ and /John Elway's Team Quarterback/ is a 1987 football video game.
+
+* John Elway's Quarterback 
+#+BEGIN_pre :style float:right
+*August 1, 2020*
+#+END_pre
+  /John Elway's Quarterback/, also known as /John Elway's Quarterback Challenge/ and /John Elway's Team Quarterback/ is a 1987 football video game.
+** Summary
+#+CAPTION: Screenshot of John Elway's Quarterback for the NES
+#+ATTR_HTML: :alt Screenshot of John Elway's Quarterback for the NES :style float:right
+[[../img/John_Elway's_Quarterback_for_NES_screenshot.png]]
+Tradwest developed /Quarterback/ as an arcade game. In 1988 John Elways agreed to endorse is, and the company renamed the game /John Elway's Quarterback/. Tradewest released a version for the Nintendo Entertainment System and Melbourne House for various home computers. The arcade game is an upright that had two player capability.
+** A table
+| Developers | Leland Corporation              |
+|------------+---------------------------------|
+| Publishers | Virgin Games                    |
+|            | Tradewest (NES version)         |
+|------------+---------------------------------|
+| Composers  | Sam Powell (Arcade)             |
+|            | David Wise (NES)                |
+|------------+---------------------------------|
+| Platforms  | Amstrad CPC, Arcade,            |
+|            | Commodore 64, NES,              |
+|            | Apple IIGS, PC (MS-DOS),        |
+|            | ZX Spectrum                     |
+|------------+---------------------------------|
+| Release    | 1987                            |
+|------------+---------------------------------|
+| Genre(s)   | Traditional football simulation |
+|------------+---------------------------------|
+| Mode(s)    | Single-player                   |
+
+  /Tagged: [[../tags/wikipedia.org][wikipedia]]
+

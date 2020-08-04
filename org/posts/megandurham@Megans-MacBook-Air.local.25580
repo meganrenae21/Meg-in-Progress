@@ -1,0 +1,40 @@
+#+SETUPFILE: ~/Meg in Progress/org-templates/level-1.org
+
+#+BEGIN_EXPORT html
+<div id="mip-top">
+<div id="mip-header"><a href="../index.html"><h1>Meg in Progress</h1></a></div>
+<div id="topnav">
+<div id="navlink-1"><a href="../about.html">about</a></div>
+<div id="navlink-2"><a href="../work.html">my work</a></div>
+<div id="navlink-3"><a href="../social.html">social</a></div>
+</div>
+#+END_EXPORT
+
+
+#+TITLE: Lorem Ipsum
+#+CATEGORY: nonsense
+#+DATE: August 01, 2020
+#+FILENAME: loremipsum.org
+#+EXCERPT: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullar auctor vitae est a ultrices. Nunc faucibus lacus et felis dapibus, vitae bibendum dolor mattis.
+
+* Lorem Ipsum
+** August 01 2020
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullar auctor vitae est a ultrices. Nunc faucibus lacus et felis dapibus, vitae bibendum dolor mattis.
+
+Class aptent tacitis sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur molis ipsum sit amet velit molestie, id blandit elit sollicitudin.
+
+Curabatir lectus mi, vestibulum eget est at, semper luctus tortor.
+
+   Tagged: [[../tags/nonsense.org][nonsense]]
+
+
+* [[./posts/loremipsum.org.org][Lorem Ipsum]] /August 01 2020/
+  # refile to Entries tagged with loremipsum.org in loremipsum.org.org
+
+
+
+* Lorem Ipsum /August 01 2020/
+  # refile to Latest Posts in frontpage.org
+** [[./tags/nonsense.org][nonsense]]
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullar auctor vitae est a ultrices. Nunc faucibus lacus et felis dapibus, vitae bibendum dolor mattis.
+   [[./posts/loremipsum.org.org][Read more...]]

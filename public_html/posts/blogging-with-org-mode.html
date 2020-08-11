@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2020-08-10 Mon 20:50 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How I built a simple static blog with org-mode</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Megan Durham">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="mip-top">
+<div id="mip-header"><a href="../index.html"><h1>Meg in Progress</h1></a></div>
+<div id="topnav">
+<div id="navlink-1"><a href="../about.html">about</a></div>
+<div id="navlink-2"><a href="../work.html">my work</a></div>
+<div id="navlink-3"><a href="../categories.org">categories</a></div>
+</div>
+
+<div id="outline-container-orgbf0798a" class="outline-2">
+<h2 id="orgbf0798a">How I built a simple static blog with org-mode</h2>
+<div class="outline-text-2" id="text-orgbf0798a">
+<p>
+<b><b>Friday, August 07, 2020</b></b>
+</p>
+
+<p>
+There's always something new to discover with Emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet. 
+</p>
+
+<p>
+For the uninitiated, Emacs is a highly extendable and configurable free and open source text editor that has been around since, like, since the dinosaurs or something, I don't know. The history isn't all that interesting<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> and also it doesn't lend itself to a good succinct explanation. Basically: it's a software that writes text-based files and allows you to generate all manner of stuff, plus you can install extension packages<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> where you can do even more stuff. All this "stuff" you can comes from setting configuration files, written in emacs-lisp code, where you tell the software how to behave, and from keyboard commands bound to the "control" and "meta"<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> keys that will execute when called. 
+</p>
+
+<p>
+And then there's org-mode<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, and all of its customization options and packages<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>, and after playing around a bit I asked myself: <i>is there anything I can't do from here?</i> I began using org-mode as a simple orgnization system and going through example setups and tutorial, noticing that many of the blogs and sites I was getting information from were themselves <i>written in org-mode</i>. And since I learn things best by doing projects I get really passionate about, I decided to give it a go and create my own static site blog with org-mode, which I would host on Github pages. 
+</p>
+
+<p>
+That's how I became obsessed. 
+</p>
+
+<p>
+What follows is an abridged step-by-step summary of my process in creating a very basic framework for a static<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup> site blogging framework, which I am using for this blog. 
+</p>
+</div>
+
+<div id="outline-container-org2816eb0" class="outline-3">
+<h3 id="org2816eb0">Starting point and goals</h3>
+<div class="outline-text-3" id="text-org2816eb0">
+<p>
+I use <a href="https://www.spacemacs.org/">Spacemacs</a>, which is not a separate piece of software; rather, it is a specific emacs  configuration for organizing and using emacs (to put it in the most simple terms). I also have access to all the built-in functionality of org-mode, and, if necessary, whatever package extensions I would need to get started. I realized that, given the right packages, there was very little that <i>couldn't</i> be done. 
+</p>
+
+<p>
+Yet, installing packages left and right carried the risk of overreliance on external packages, and a lack of confidence in my own ability to find creative resolutions outside of fancy extensions. So I made a few flexible ground rules for myself with this in mind:
+</p>
+
+<ul class="org-ul">
+<li>I would use, as much as possible, the built-in functionality of org-mode, including org-publish and the org exporters, and would not use an external static site generator package<sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup>.</li>
+<li>I would build a framework that took advantage of org-mode functions while also allowing myself to <i>not</i> use methods that existed if they didn't suit my needs.</li>
+<li>I would not be restricted to solely using org-mode. I had to remind myself that there could be built-in or external emacs packages that weren't specific to org, but could be easily integrated into my workflow.</li>
+<li>It didn't have to be perfect or do <i>every little thing</i> I'd like to be "live"; this was a project that could be continuously in development, with features/functionality added as I learned more.</li>
+</ul>
+
+<p>
+I'm going to reiterate here, <b><b>I'm a complete newbie</b></b>. I know very little emacs-lisp, I've only been playing around in emacs for a little over a month, and this build is based on what I've mastered <i>so far</i>. There are certainly aspects that could have been made a lot easier by using already-established solutions for a lot of my issues, but what fun would that be? I wanted this to be a fun, discovery process where I could figure things out, largely by my own tinkering and experimentation. So, please, if you are an emacs and org-mode master, be kind. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org446108b" class="outline-3">
+<h3 id="org446108b">Initial file framework</h3>
+<div class="outline-text-3" id="text-org446108b">
+<p>
+The best resource I found at the beginning of this endeavor was an <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">org-publish tutorial</a> on <a href="https://orgmode.org/worg/index.html">Worg</a>, an subsection of the official  org-mode website maintained by the community of org-users that is an invaluable tool in learning all that you can do with org-mode.
+</p>
+
+<p>
+Using this tutorial as a guide, I created two folders within my main project folder: <code>~/org/</code> and  <code>~/public_html/</code>. The idea is that my input would be under the  <code>~/org/</code> directory, and whatever was in that directory would be exported to html and published in the <code>~/public_html/</code> directory. 
+</p>
+
+<p>
+After that, I left the <code>~/public_html/</code> folder alone, as any files and subdirectories should be created during the publishing process. Any changes I would make to the final html version of the files would be done in the org version. 
+</p>
+
+<p>
+Additionally, since <i>anything</i> in the <code>~/org/</code> directory would be exported (unless I specifically configured a certain file or headline not to be exported), it wasn't restricted to simply <i>org</i> files. Simply put, any file at all that I wanted to eventually wind up in <code>~/public_html/</code> would be placed within <code>~/org/</code>. 
+</p>
+
+<p>
+First, I created <code>index.org</code> within <code>~/org/</code> and then I created several folders (subdirectories) that would eventually carry files of their own. This was my initial file organization for this blog:
+</p>
+
+<pre class="example">
+~/org/
+   |- index.org
+   |- css/
+   |  `style.css
+   |- img/
+   |- posts/
+~/public_html/
+</pre>
+
+
+<p>
+With this setup, <code>index.org</code> would become <code>index.html</code> under the <code>~/public_html/</code> directory. Additionally, <code>~/org/css/style.css</code> would be exported to <code>~/public_html/css/style.css</code> so I could apply a consistent style to exported HTML files. The <code>img/</code> directory would carry images and other attachments, while all posts would go into the <code>posts/</code> folder for export. 
+</p>
+
+<p>
+Note, that if, in editing an org file within the <code>~/org/</code> directory, if I were to link to another org file within <code>~/org/</code>, the exporter would then transform that link into a link to the corresponding file in <code>~/public_html/</code>. Likewise, by applying <code>/css/style.css</code> to <code>index.org</code>, the <code>~/public_html/index.html</code> file resulting from the export would be loaded with a stylesheet in <code>~/public_html/css/style.css</code>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab030fa" class="outline-3">
+<h3 id="orgab030fa">The "export.el" file</h3>
+<div class="outline-text-3" id="text-orgab030fa">
+<p>
+Once I got some basic files set up under this framework, I needed to perform an initial export test to ensure that this would work as planned. Instead of creating my project configuration under my main emacs config file, I decided to use a separate file, <code>~/export.el</code>, which I placed in my <i>main project directory</i> (even with, and not under, <code>~/public_html/</code> and <code>~/org/</code>). 
+</p>
+
+<p>
+The first line is <code>(require 'ox-publish)</code> which I use to ensure that emacs loads the ox-publish library when publication is triggered. After that I set the variable <code>org-publish-project-alist</code> to define my project scope. 
+</p>
+
+<p>
+First, I provide a list of components ("blog-posts", "blog-pages", and "blog-static"), and then I compile those components (and all of their settings) into the "blog" project. So it goes like this:
+</p>
+
+<pre class="example">
+(setq org-publish-project-alist
+   '(("blog-posts"
+      :base-directory "org/posts/"
+      :base-extension "org"
+      :publishing-directory "public_html/posts/"
+      :recursive t
+      :publishing-function org-html-publish-to-html
+      :org-html-preamble nil
+     )
+     ("blog-pages"
+      :base-directory "org/"
+      :base-extension "org"
+      :publishing-directory "public_html/"
+      :recursive t
+      :publishing-function org-html-publish-to-html
+      :org-html-preamble nil
+     )
+     ("blog-static"
+      :base-directory "org/"
+      :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+      :publishing-directory "public_html/"
+      :recursive t
+      :publishing-function org-publish-attachment
+     )
+     ("blog"
+      :components ("blog-posts" "blog-pages" "blog-static"))
+)
+</pre>
+
+<p>
+Now, I have several other options set up in <code>export.el</code> but have narrowed down what I felt were the most important for me to get this page set up how I want it. Let's take a closer look at the three components and the settings I gave them above.
+</p>
+</div>
+
+<div id="outline-container-orgd6d1c04" class="outline-4">
+<h4 id="orgd6d1c04">Components</h4>
+<div class="outline-text-4" id="text-orgd6d1c04">
+<dl class="org-dl">
+<dt>blog-posts</dt><dd>these are all the posts that will be published to the blog. I've given them a separate component because the configuration for these files could potentially differentiate from what's in "blog-pages", and I think it's better to keep each part of the site separate as much as possible.</dd>
+<dt>blog-pages</dt><dd>so here we're going with every org file within the <code>~/org/</code> directory<sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup>.</dd>
+<dt>blog-static</dt><dd>for all files included in the <code>~/org/</code> directory that <i>aren't</i> org files, and should keep their native extension upon export.</dd>
+<dt>blog</dt><dd>this gives us all these separate components, and puts them together into one project.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgd770a07" class="outline-4">
+<h4 id="orgd770a07">Options</h4>
+<div class="outline-text-4" id="text-orgd770a07">
+<dl class="org-dl">
+<dt>base-directory</dt><dd>this is the directory where the files are coming <i>from</i> - in this case <code>~/org/</code></dd>
+<dt>publishing-directory</dt><dd>the directory where the files are going to be published <i>to</i> - <code>~/public_html/</code></dd>
+<dt>base-extension</dt><dd>tells the exporter to export files with this(these) extensions. For pages and posts, the files exported will end in <code>.org</code>, but for the static files, the base extension has multiple possibilities.</dd>
+<dt>publishing-function</dt><dd>this tells the back-end how to publish these files. I need to publish everything that's an org file as an html file, so I set <code>blog-posts</code> and <code>blog-pages</code> with <code>org-html-publish-to-html</code>. Meanwhile, anything in the <code>~/org/</code> directory that doesn't end in <code>.org</code> (<code>blog-static</code>) should just be copies into the desination folder using <code>org-publish-attachment</code>.</dd>
+<dt>recursive</dt><dd>tells the exporter whether to include files from subdirectories recursively, or just from the parent directory. This has two possible options: <code>nil</code>, meaning just use the parent directory, or non-nil (typically <code>t</code> is used), which means to also include subdirectories.</dd>
+<dt>org-html-preamble</dt><dd>this was important for me to set as <code>nil</code> to ensure that the exporter did not include a preamble, something that is included at the top of each file. While the preamble can be customized to suit your needs, I preferred not to mess with it and used a templating method instead (which I will go into later).</dd>
+</dl>
+
+<p>
+Now that I had my <code>export.el</code> file configured the way I wanted it and some dummy posts and pages set up to see how it looked, I could go ahead and publish. To do so, I placed my cursor after the ending parenthesis on the first line of the file (<code>(require 'ox-publish)</code>), and pressed <code>C-x C-e</code><sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup>. Then I navigated to the end of the file, after the last ending parenthesis on the last line, and pressed <code>C-x C-e</code> again. This will evaluate the emacs-lisp code in the file. After that, all I had to do to execute was to press <code>M-x org-publish-project</code> which would list all the components in the minibuffer. I could then navigate down to select "blog" and press the <code>return</code> key. Afterward, I could find the resulting exported files and folders in the <code>~/public_html/</code> directory. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1bdc538" class="outline-3">
+<h3 id="org1bdc538">Adding style and usability</h3>
+<div class="outline-text-3" id="text-org1bdc538">
+<p>
+So now that I knew how to export an entire static website via org-mode, the question was: <i>how do I get it to look how I want it to and behave how I need it to?</i> I had a list of problems I needed to solve to brainstorm ways to fix them:
+</p>
+
+<ul class="org-ul">
+<li>Custom CSS stylesheet</li>
+<li>A tagging/category system for posts</li>
+<li>A custom header with custom links</li>
+<li>An index page that would contain my most recent posts</li>
+<li>A sitemap or archives page that would contain past entries</li>
+</ul>
+
+<p>
+So let's talk about the solutions I've implemented so far. 
+</p>
+</div>
+
+<div id="outline-container-orgf0a0810" class="outline-4">
+<h4 id="orgf0a0810">Export templates</h4>
+<div class="outline-text-4" id="text-orgf0a0810">
+<p>
+While I already selected certain export options within <code>export.el</code>, I could also set options within specific files using properties dictating how the files would be exported<sup><a id="fnr.10" class="footref" href="#fn.10">10</a></sup>. That meant I could create export templates that could then be associated with whatever files I wanted. 
+</p>
+
+<p>
+I created a new folder on the same level as <code>~/org/</code> and <code>~/public_html/</code> called <code>~/org-templates/</code> and added two files: <code>level-0.org</code> and <code>level-1.org</code>. This was the level-0 file:
+</p>
+
+<pre class="example">
+#+options: html-link-use-abs-url:nil html-postamble:nil html-preamble:nil
+#+options: html-scripts:t html-style:nil html5-fancy:t tex:t
+#+options: tags:t title:nil toc:nil num:0 date:t
+#+html_doctype: html5
+#+html_container: div
+#+html_head: &lt;link rel="stylesheet" type="text/css" href="css/style.css" /&gt;
+#+creator: Megan Renae
+</pre>
+
+<p>
+The <code>level-1.org</code> is exactly the same except the stylesheet link goes back a directory, becoming <code>"../css/style.css"</code>. 
+</p>
+
+<p>
+Here are the important bits:
+</p>
+<ul class="org-ul">
+<li>No, I don't want the exporter to insert org's own postambe and preamble</li>
+<li>No, I don't want to use the default stylesheet</li>
+<li>Yes, export posts with tags (in the end, I didn't need this at all, as I decided not to use tags, but the option remains)</li>
+<li>No, don't export the <code>#+TITLE</code> property with the file (I add the title myself through headlines)</li>
+<li>Use the HTML5 doctype</li>
+<li>Use <code>div</code> as the primary container for content</li>
+<li>Insert my custom CSS stylesheet into the <code>head</code> of the document</li>
+<li>No, don't insert a table of contents with each file</li>
+<li>No, don't number sections on the file</li>
+<li>Yes, please export with the date</li>
+</ul>
+
+<p>
+I added the path to the template file at the top of each page with the #+SETUPFILE property:
+</p>
+
+<pre class="example">
+#+SETUPFILE: ~/org-templates/level-1.org
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org24e3ac9" class="outline-4">
+<h4 id="org24e3ac9">YASnippet</h4>
+<div class="outline-text-4" id="text-org24e3ac9">
+<p>
+So, here's my secret weapon. I learned to create snippets (at least in their basic form, and perhaps not how they were meant to be used) that would give me a skeleton for each post, which could then easily be dressed up for a clean export. <a href="http://joaotavora.github.io/yasnippet/">YASnippet</a> provided the answer for about 75% of my problems. How? Well:
+</p>
+
+<p>
+<b><b>I could export my own custom HTML header using an export block</b></b>
+</p>
+
+<p>
+Org-mode allows creation of special blocks that are written between lines that start with <code>#+BEGIN_XXXXX</code> and end with <code>#+END_XXXXX</code>. In particular, to include HTML code within an org-file, you can use the lines <code>#+BEGIN_EXPORT html</code> and <code>#+END_EXPORT</code>. 
+</p>
+
+<p>
+I created a snippet to use for blog posts, and after adding the <code>#+SETUPFILE</code>, I wrote a very simple code to ensure my blog header was added to each new post. My blog post snippet, then, begins like this:
+</p>
+
+<pre class="example">
+#+SETUPFILE: ~/org-templates/level-1.org
+
+#+BEGIN_EXPORT html
+/code for my HTML header/
+#+END_EXPORT
+</pre>
+
+<p>
+<b><b>I could create custom fields so each post had defined properties</b></b>
+</p>
+
+<p>
+Essentially, when beginning a new post, I was filling out a form, with each field providing more specific information about the post. There were five properties I felt were important to include:
+</p>
+
+<dl class="org-dl">
+<dt><code>#+TITLE</code></dt><dd>The title of the post, which was <i>mirrored</i><sup><a id="fnr.11" class="footref" href="#fn.11">11</a></sup> in the first-level  headline of the content of the post.</dd>
+<dt><code>#+CATEGORY</code></dt><dd>The category of the post, which would then be mirrored in a custom link created at the bottom of the entry that would lead back to the category's (though I used the word "tag") index page, which would have a list of all entries under that tag.</dd>
+<dt><code>#+DATE</code></dt><dd>Automatically updated with the date the template was first inserted into the file. This isn't ideal, and I realize this would be better to instead be the date of publication. Hey, I never said this was perfect.</dd>
+<dt><code>#+FILENAME</code></dt><dd>This is just the name of the file without the <code>.org</code> extension, and it's mirrors are used to create backlinks that will appear in the index page and the category page.</dd>
+<dt><code>#+EXCERPT</code></dt><dd>Generally, just the first paragraph of an entry. This is used to create the "preview" text that will appear in the index page.</dd>
+</dl>
+
+<p>
+Here's what this part looks like in practice:
+</p>
+
+<pre class="example">
+#+TITLE: ${1:title}
+#+CATEGORY: ${2:category}
+#+DATE: `(format-time-string "%F")`
+#+FILENAME: ${3:filename} 
+#+EXCERPT: ${4:excerpt}
+
+=* $1=
+**`(format-time-string "%A, %B %d, %Y")`**
+
+$4
+$0
+=/Tagged: [[../tags/$2.org][$2]]/=
+</pre>
+
+<p>
+The fields are formatted as ${X:placeholder}, with X being the number of the field, and "placeholder" being the text to be updated. Mirrors are given with $X. This also involves custom timestamps, and the values for the symbols used can be found in the <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Time-Parsing.html">GNU Emacs manual</a>. 
+</p>
+
+<p>
+<b><b>I could create backlinks with headline entries that I could refile to a tag index and to a custom sitemap</b></b>
+</p>
+
+<p>
+Notice that in the previous block I included a link at the end of the entry to a tag index which would then display all entries with the same category. Well, this is where that magic happens. 
+</p>
+
+<p>
+Now, <code>org-publish</code> does come with its own sitemap and index features, which have served plenty well on plenty of org-based websites. And I still may implement one or both of these features on this blog in the future. That said, I chose to use backlinking to create a poor-man's indexing process. 
+</p>
+
+<p>
+The key here is the <code>org-refile</code><sup><a id="fnr.12" class="footref" href="#fn.12">12</a></sup> function, and that requires the pages that I'm using to be refiling targets to be included in the  <code>org-refile-targets</code> variable, which I ended up defining in my personal configuration file. For purposes of this site, the setup is something like this:
+</p>
+
+<pre class="example">
+(setq org-refile-targets '(org-agenda-files . (:maxlevel . 9)))
+(setq org-reverse-note-order t)
+</pre>
+
+<p>
+I've turned on <code>org-reverse-note-order</code> so that newer entries would appear at the top of the indices. I can add any file to <code>org-agenda-files</code> by visiting it and pressing <code>C-c [</code>. With this configuration any headline within an agenda file (up to the 9th level) is a refile target. This leads me to the last section of my blog post snippet:
+</p>
+
+<pre class="example">
+=* [[../posts/$3.org][$1]]=
+`(format-time-string "%D %a")` ;; this is the refile headline in the tag indexing
+
+=* [[./posts/$3.org][$1]]= || `(format-time-string "%D %a")`
+/[[./tags/$2.org][$2]]/
+$4
+[[./posts/$3.org][Read more...]] :: this is refiled to the sitemap
+</pre>
+
+<p>
+This creates more mirrors from the fields that were defined earlier in the snippet. Now I just need to run the command <code>org-refile</code>, select the correct target, and these headlines will be placed in their correct place.
+</p>
+
+<p>
+One problem, though&#x2026; where is that?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b8aa74" class="outline-4">
+<h4 id="org8b8aa74">Refining the structure</h4>
+<div class="outline-text-4" id="text-org8b8aa74">
+<p>
+Let's go back to the very beginning, when I created an <code>index.org</code> file, the first file of my <code>org-publish</code> project. It's time to finalize that page by giving it our sitemap. To do this, I create a new file under <code>~/org/</code>, <code>sitemap.org</code>, which I add as an agenda file.  This is the file that I will end up using to create the list of posts in anti-chronological order that will appear in my <code>index.org</code> page.
+</p>
+
+<p>
+To start, <code>sitemap.org</code> will have a single first-level headline, "Latest Posts". Then I will refile the headline created with my blog post snippet to the sitemap file, and it will show up as the first entry. Now I go back to <code>index.org</code> so I can include the latest posts from <code>sitemap.org</code> on my blog's front page. To do this, I can use the <code>#+INCLUDE</code> property, like this:
+</p>
+
+<p>
+<code>#+INCLUDE: "~/org/sitemap.org"</code>
+</p>
+
+<p>
+That's a good start, but since the sitemap is going to house ALL files from the blog's history, I don't want to include the <i>entire</i> sitemap in my index page. Luckily, there's a way to limit what lines will be included. 
+</p>
+
+<p>
+Let's look back at the entry we've refiled to <code>sitemap.org</code>:
+</p>
+
+<p>
+#+BEGIN<sub>SRC</sub>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org6aab49e" class="outline-2">
+<h2 id="org6aab49e">[[./posts/post.org][Post Title] || XXXX-XX-XX XXX</h2>
+<div class="outline-text-2" id="text-org6aab49e">
+<p>
+<i><a href="./tags/tag.html">category</a></i>
+POST EXCERPT
+<a href="./posts/post.html">Read more&#x2026;</a>
+#+END<sub>SRC</sub>
+</p>
+
+<p>
+Since Emacs doesn't automatically create new lines, I know that each entry in <code>sitemap.org</code> will be exactly 4 lines. The actual sitemap will begin on line 2, after the "Latest Posts" headline. Say I want to include the last five posts in my index page; all I need to do is calculate how many lines that would be. 
+</p>
+
+<p>
+In this case, 5 posts would be 20 lines. Since we're starting on line 2, we know the last line we'll need to use is line 21. However, when we include line numbers in the <code>#+INCLUDE</code> line, the last line given is excluded, so we'll need to add one more to ensure the last post doesn't get cut off early. 
+</p>
+
+<p>
+This is what we end up with:
+</p>
+
+<p>
+<code>#+INCLUDE: "~/org/sitemap.org" :lines "2-22"</code>
+</p>
+
+<p>
+Now, there's one more thing: individual pages for each category or tag. I've already laid the groundwork with out snippet and the post, at the very end, contains a link to the category page under a new subdirectory I've created: <code>~/org/tags/</code>. I can click that link when I'm done writing my post, and it will take me to a new buffer containing the category/tag index page. If it's a new category, and therefore no page has been created yet, it will create a new buffer with a completely blank file and all I need to do is insert a headline (<code>* TAG: CategoryName</code>), press <code>C-x C-s</code>, and just like that the file is created. By pressing <code>C-c [</code>, the new file is added as an agenda file. Then, I can refile the corresponding headline to add a new entry to the tag page. 
+</p>
+</div>
+
+<div id="outline-container-orga116256" class="outline-3">
+<h3 id="orga116256">Final touches</h3>
+<div class="outline-text-3" id="text-orga116256">
+<p>
+Now that I have built the framework I need for this to work correctly, there are only a couple of things left before going live. The obvious one is to create an <a href="../about.html">About Page</a>, which is self-explanatory, along with a <a href="../work.html">Work Page</a> to show off exactly what I've done in the past (though it doesn't feel like I have much&#x2026;yet), and a <a href="../categories.html">Categories Page</a> to link to all of the individual category indices.
+</p>
+
+<p>
+No, this isn't exactly finished. I'll be continuously working on this blog, whether that means to add something else, or to change things around, just to keep it in sync with my org learning curve, as well as my changing tastes and needs. I'd still like to implement an Archives page. I know that using ya-snippet in the way that I have can provide some difficulties when it comes to retroactive changes, so I'm trying to isolate individual elements in separate files to make implementing changes easier. I'm also using <a href="https://magit.vc/">Magit</a> for version control. 
+</p>
+
+<p>
+In short, this is a work in progress - just like me.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+but I guess if you wanted to go down that rabbit hole, you would be able to to access a wealth of information from <a href="https://www.gnu.org/software/emacs/">the home page of GNU Emacs</a>. Like, a lot a lot. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<b><b>extension</b></b> - basically software in software. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+generally, the meta key is the alt or option key on Windows or Mac computers.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+Explaining Org-mode succinctly is even more of a lost cause than Emacs, so just <a href="https://orgmode.org/">go here</a> if you're curious.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
+software in software in software
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6">6</a></sup> <div class="footpara"><p class="footpara">
+a static site is basically a website built from HTML files, as opposed to a dynamic site where a webpage is built on the server pulling resources from several different locations. On a static site blog, when you click on a link to a post or page, you're served a page that has already been built in the file system. On a dynamic blog (built with Wordpress, for example), each request builds a page from scratch based on current site data and content. Confused? <a href="https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/">This may do a better job of explaining.</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7">7</a></sup> <div class="footpara"><p class="footpara">
+Don't get me wrong, I think these packages look awesome. <a href="https://orgmode.org/worg/org-blog-wiki.html">Here's a pretty good list</a>. Please don't think I won't take advantage of these in the future - I'm sure I will. They just weren't right for <i>this</i> project. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
+A little caveat here: I ended up setting this to recursive, which means all files are technically included in this component, which could cause an issue as the files in the <code>/posts/</code> directory are included in <code>blog-posts</code>. This hasn't caused an issue for me yet, and my main decision for doing so would be to include the <code>/tags/</code> directory. However, looking at this now I realize it would make more sense to add <code>blog-tags</code> as a separate component.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9">9</a></sup> <div class="footpara"><p class="footpara">
+Remember emacs using the control and meta keys, and these are shorted to "C" and "M" when written out. When used with a hyphen and then another letter, this would mean to press the command key (control or meta) and the corresponding letter at the same time. In this example, <code>C-x C-e</code> means to press the Control key at the same time as "x", let go, then press the Control key again, at the same time as "e" on the keyboard.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10">10</a></sup> <div class="footpara"><p class="footpara">
+As always, for more information, check out the <a href="https://orgmode.org/org.html#Export-Settings">org manual</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.11" class="footnum" href="#fnr.11">11</a></sup> <div class="footpara"><p class="footpara">
+In ya-snippets, <i>mirrors</i> can be placed anywhere in the template, and they are updated with the value of their primary field. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.12" class="footnum" href="#fnr.12">12</a></sup> <div class="footpara"><p class="footpara">
+Org-refile is more of an organization thing, and less of a publication thing, and I've just manipulated its use here for my purposes. However, to know more about how it's <i>supposed</i> to be used, again, <a href="https://orgmode.org/manual/Refile-and-Copy.html#Refile-and-copy">check out the org manual</a>.
+</p>
+
+<p class="footpara">
+<i>Tagged: <a href="../tags/dev.html">dev</a></i>
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>

@@ -10,8 +10,8 @@
 </div>
 #+END_EXPORT
 
-* Entries tagged wikipedia:
-** [[../posts/juan-jose-de-jesus-yas.org][Juan Jose de Jesus Yas]]
-   08/01/20 Sat
-   # refile to Entries tagged with wikipedia in wikipedia.org
+* Entries tagged dev:
 
+** [[../posts/blogging-with-org-mode.org][How I built a simple static blog with org-mode]]
+   08/07/20 Fri
+   # refile to Entries tagged with dev in dev.org

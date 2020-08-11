@@ -8,7 +8,22 @@
 </div>
 #+END_EXPORT
 
-#+TITLE: Meg in Progress
+#+TITLE: Meg in Progress - About
 #+SETUPFILE: ~/Meg in Progress/org-templates/level-0.org
 
-#+INCLUDE:"~/Meg in Progress/org/sitemap.org" :lines "2-27"
+* About Me
+
+#+BEGIN_VERSE
+I'm Nobody! Who are you?
+Are you - Nobody - too?
+Then there's a pair of us!
+Don't tell! they'd advertise - you know!
+
+How dreary - to be - Somebody!
+How public - like a Frog -
+To tell one's name - the livelong June -
+To an admiring Bog!
+#+END_VERSE
+/Emily Dickinson, 1981/
+
+I'm Meg, a work in progress.

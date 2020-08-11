@@ -1,7 +1,5 @@
 * Latest Posts
-** [[./posts/juan-jose-de-jesus-yas.org][Juan Jose de Jesus Yas]] || 08/01/20 Sat
-   # refile to Latest Posts in sitemap.org
-   /[[./tags/wikipedia.org][wikipedia]]/
-
-   Juan Jose de Jesus Yas (1856-1917), born Kohei Yasu, was a Japanese-born photography who established himself in Antigua Guatemala, Guatemala and documented that city toward the end of the 19th century and early 20th century.
-   [[./posts/juan-jose-de-jesus-yas.org][Read more...]]
+** [[./posts/blogging-with-org-mode.org][How I built a simple static blog with org-mode]] || 08/07/20 Fri
+   /[[./tags/dev.org][dev]]/
+   There's always something new to discover with emacs and org-mode, and building a blog was my way of wading into deeper waters - not longer content to just get my feet wet. 
+   [[./posts/blogging-with-org-mode.org][Read more...]]

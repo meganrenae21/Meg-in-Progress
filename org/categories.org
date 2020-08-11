@@ -8,7 +8,9 @@
 </div>
 #+END_EXPORT
 
-#+TITLE: Meg in Progress
+#+TITLE: Meg in Progress - Categories
 #+SETUPFILE: ~/Meg in Progress/org-templates/level-0.org
 
-#+INCLUDE:"~/Meg in Progress/org/sitemap.org" :lines "2-27"
+* Categories
+- [[./tags/dev.org][dev]]
+

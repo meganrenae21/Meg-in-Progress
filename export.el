@@ -3,7 +3,7 @@
       '(("blog-posts"
          :base-directory "org/posts/"
          :base-extension "org"
-         :publishing-directory "public_html/posts/"
+         :publishing-directory "docs/posts/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 3
@@ -22,7 +22,7 @@
         ("blog-pages"
          :base-directory "org/"
          :base-extension "org"
-         :publishing-directory "public_html/"
+         :publishing-directory "docs/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 4
@@ -37,7 +37,7 @@
         ("blog-static"
          :base-directory "org/"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "public_html/"
+         :publishing-directory "docs/"
          :recursive t
          :publishing-function org-publish-attachment
          )

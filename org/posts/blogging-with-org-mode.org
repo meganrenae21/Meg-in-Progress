@@ -5,20 +5,20 @@
 <div id="mip-header"><a href="../index.html"><h1>Meg in Progress</h1></a></div>
 <div id="topnav">
 <div id="navlink-1"><a href="../about.html">about</a></div>
-<div id="navlink-2"><a href="../work.html">my work</a></div>
-<div id="navlink-3"><a href="../categories.org">categories</a></div>
+<div id="navlink-2"><a href="../archives.html">archives</a></div>
+<div id="navlink-3"><a href="../categories.html">categories</a></div>
 </div>
 #+END_EXPORT
 
 
 #+TITLE: How I built a simple static blog with org-mode
 #+CATEGORY: dev
-#+DATE: 2020-08-07
+#+DATE: 2020-08-11
 #+FILENAME: blogging-with-org-mode
 #+EXCERPT: There's always something new to discover with Emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet. 
 
 * How I built a simple static blog with org-mode
-  **Friday, August 07, 2020**
+  **Tuesday, August 11, 2020**
 
   There's always something new to discover with Emacs and org-mode, and building a blog was my way of wading into deeper waters - no longer content to just get my feet wet. 
 
@@ -262,7 +262,7 @@ That's a good start, but since the sitemap is going to house ALL files from the 
 Let's look back at the entry we've refiled to =sitemap.org=:
 
 #+BEGIN_SRC
-* [[./posts/post.org][Post Title] || XXXX-XX-XX XXX
+=* [[./posts/post.org][Post Title]= || XXXX-XX-XX XXX
 /[[./tags/tag.org][category]]/
 POST EXCERPT
 [[./posts/post.org][Read more...]]
@@ -280,7 +280,7 @@ Now, there's one more thing: individual pages for each category or tag. I've alr
 
 ** Final touches
 
-Now that I have built the framework I need for this to work correctly, there are only a couple of things left before going live. The obvious one is to create an [[../about.org][About Page]], which is self-explanatory, along with a [[../work.org][Work Page]] to show off exactly what I've done in the past (though it doesn't feel like I have much...yet), and a [[../categories.org][Categories Page]] to link to all of the individual category indices.
+Now that I have built the framework I need for this to work correctly, there are only a couple of things left before going live. The obvious one is to create an [[../about.org][About Page]], which is self-explanatory, along with an [[../archives.org][Archives]] page for past entries (for which I use the same re-filing method I explained above with tags), and a [[../categories.org][Categories Page]] to link to all of the individual category indices.
 
 No, this isn't exactly finished. I'll be continuously working on this blog, whether that means to add something else, or to change things around, just to keep it in sync with my org learning curve, as well as my changing tastes and needs. I'd still like to implement an Archives page. I know that using ya-snippet in the way that I have can provide some difficulties when it comes to retroactive changes, so I'm trying to isolate individual elements in separate files to make implementing changes easier. I'm also using [[https://magit.vc/][Magit]] for version control. 
 

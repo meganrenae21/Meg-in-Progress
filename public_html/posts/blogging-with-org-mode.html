@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-08-10 Mon 20:50 -->
+<!-- 2020-08-11 Tue 22:14 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How I built a simple static blog with org-mode</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Megan Durham">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css"><script type="text/javascript" src="../js/script.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -61,15 +61,15 @@ for the JavaScript code in this tag.
 <div id="mip-header"><a href="../index.html"><h1>Meg in Progress</h1></a></div>
 <div id="topnav">
 <div id="navlink-1"><a href="../about.html">about</a></div>
-<div id="navlink-2"><a href="../work.html">my work</a></div>
-<div id="navlink-3"><a href="../categories.org">categories</a></div>
+<div id="navlink-2"><a href="../archives.html">archives</a></div>
+<div id="navlink-3"><a href="../categories.html">categories</a></div>
 </div>
 
 <div id="outline-container-orgbf0798a" class="outline-2">
 <h2 id="orgbf0798a">How I built a simple static blog with org-mode</h2>
 <div class="outline-text-2" id="text-orgbf0798a">
 <p>
-<b><b>Friday, August 07, 2020</b></b>
+<b><b>Tuesday, August 11, 2020</b></b>
 </p>
 
 <p>
@@ -447,22 +447,12 @@ That's a good start, but since the sitemap is going to house ALL files from the 
 Let's look back at the entry we've refiled to <code>sitemap.org</code>:
 </p>
 
-<p>
-#+BEGIN<sub>SRC</sub>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-org6aab49e" class="outline-2">
-<h2 id="org6aab49e">[[./posts/post.org][Post Title] || XXXX-XX-XX XXX</h2>
-<div class="outline-text-2" id="text-org6aab49e">
-<p>
-<i><a href="./tags/tag.html">category</a></i>
+<pre class="example">
+=* [[./posts/post.org][Post Title]= || XXXX-XX-XX XXX
+/[[./tags/tag.org][category]]/
 POST EXCERPT
-<a href="./posts/post.html">Read more&#x2026;</a>
-#+END<sub>SRC</sub>
-</p>
+[[./posts/post.org][Read more...]]
+</pre>
 
 <p>
 Since Emacs doesn't automatically create new lines, I know that each entry in <code>sitemap.org</code> will be exactly 4 lines. The actual sitemap will begin on line 2, after the "Latest Posts" headline. Say I want to include the last five posts in my index page; all I need to do is calculate how many lines that would be. 
@@ -484,12 +474,14 @@ This is what we end up with:
 Now, there's one more thing: individual pages for each category or tag. I've already laid the groundwork with out snippet and the post, at the very end, contains a link to the category page under a new subdirectory I've created: <code>~/org/tags/</code>. I can click that link when I'm done writing my post, and it will take me to a new buffer containing the category/tag index page. If it's a new category, and therefore no page has been created yet, it will create a new buffer with a completely blank file and all I need to do is insert a headline (<code>* TAG: CategoryName</code>), press <code>C-x C-s</code>, and just like that the file is created. By pressing <code>C-c [</code>, the new file is added as an agenda file. Then, I can refile the corresponding headline to add a new entry to the tag page. 
 </p>
 </div>
+</div>
+</div>
 
 <div id="outline-container-orga116256" class="outline-3">
 <h3 id="orga116256">Final touches</h3>
 <div class="outline-text-3" id="text-orga116256">
 <p>
-Now that I have built the framework I need for this to work correctly, there are only a couple of things left before going live. The obvious one is to create an <a href="../about.html">About Page</a>, which is self-explanatory, along with a <a href="../work.html">Work Page</a> to show off exactly what I've done in the past (though it doesn't feel like I have much&#x2026;yet), and a <a href="../categories.html">Categories Page</a> to link to all of the individual category indices.
+Now that I have built the framework I need for this to work correctly, there are only a couple of things left before going live. The obvious one is to create an <a href="../about.html">About Page</a>, which is self-explanatory, along with an <a href="../archives.html">Archives</a> page for past entries (for which I use the same re-filing method I explained above with tags), and a <a href="../categories.html">Categories Page</a> to link to all of the individual category indices.
 </p>
 
 <p>

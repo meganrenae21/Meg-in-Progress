@@ -5,13 +5,12 @@
 <div id="mip-header"><a href="../index.html"><h1>Meg in Progress</h1></a></div>
 <div id="topnav">
 <div id="navlink-1"><a href="../about.html">about</a></div>
-<div id="navlink-2"><a href="../work.html">my work</a></div>
-<div id="navlink-3"><a href="../social.html">social</a></div>
+<div id="navlink-2"><a href="../archives.html">archives</a></div>
+<div id="navlink-3"><a href="../categories.html">categories</a></div>
 </div>
 #+END_EXPORT
 
 * Entries tagged dev:
 
 ** [[../posts/blogging-with-org-mode.org][How I built a simple static blog with org-mode]]
-   08/07/20 Fri
-   # refile to Entries tagged with dev in dev.org
+   08/11/20 Tue

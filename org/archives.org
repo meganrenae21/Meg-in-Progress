@@ -8,22 +8,11 @@
 </div>
 #+END_EXPORT
 
-#+TITLE: Meg in Progress - About
+#+TITLE: Meg in Progress - Archives
 #+SETUPFILE: ~/Meg in Progress/org-templates/level-0.org
 
-* About Me
+* 2020
+** August
+*** [[./posts/blogging-with-org-mode.org][How I built a simple static blog with org-mode]] [2020-08-11]
 
-#+BEGIN_VERSE
-I'm Nobody! Who are you?
-Are you - Nobody - too?
-Then there's a pair of us!
-Don't tell! they'd advertise - you know!
 
-How dreary - to be - Somebody!
-How public - like a Frog -
-To tell one's name - the livelong June -
-To an admiring Bog!
-#+END_VERSE
-/Emily Dickinson, 1981/
-
-I'm Meg, a work in progress.

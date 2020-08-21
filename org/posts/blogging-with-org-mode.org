@@ -8,6 +8,7 @@
 <div id="navlink-2"><a href="../archives.html">archives</a></div>
 <div id="navlink-3"><a href="../categories.html">categories</a></div>
 </div>
+</div>
 #+END_EXPORT
 
 

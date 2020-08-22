@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+	   xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	   xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	   xmlns:dc="http://purl.org/dc/elements/1.1/"
+	   xmlns:atom="http://www.w3.org/2005/Atom"
+	   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	   xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	   xmlns:georss="http://www.georss.org/georss"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:media="http://search.yahoo.com/mrss/"><channel>
+  <title>Meg in Progress</title>
+  <atom:link href="./rss.xml" rel="self" type="application/rss+xml" />
+  <link></link>
+  <description><![CDATA[]]></description>
+  <language>en</language>
+  <pubDate>Sat, 22 Aug 2020 15:39:13 -0500</pubDate>
+  <lastBuildDate>Sat, 22 Aug 2020 15:39:13 -0500</lastBuildDate>
+  <generator>Emacs 26.3 Org-mode 9.3.7</generator>
+  <webMaster>megandurham@Megans-MacBook-Air.local (Megan Durham)</webMaster>
+  <image>
+    <url>https://orgmode.org/img/org-mode-unicorn-logo.png</url>
+    <title>Meg in Progress</title>
+    <link></link>
+  </image>
+
+  <item>
+    <title>Blogging with Org Mode: An Update</title>
+    <link>./https://meganrenae21.github.io/Meg-in-Progress/posts/blog-org-mode-pt-2.html</link>
+    <author>megandurham@Megans-MacBook-Air.local (Megan Durham)</author>
+    <guid isPermaLink="false">./https://meganrenae21.github.io/Meg-in-Progress/posts/blog-org-mode-pt-2.html</guid>
+    <pubDate>Sat, 22 Aug 2020 00:00:00 -0500</pubDate>
+
+    <description><![CDATA[]]></description>
+  </item>
+  <item>
+    <title>How I built a simple static blog with org-mode</title>
+    <link>./https://meganrenae21.github.io/Meg-in-Progress/posts/blogging-with-org-mode.html</link>
+    <author>megandurham@Megans-MacBook-Air.local (Megan Durham)</author>
+    <guid isPermaLink="false">./https://meganrenae21.github.io/Meg-in-Progress/posts/blogging-with-org-mode.html</guid>
+    <pubDate>Tue, 11 Aug 2020 00:00:00 -0500</pubDate>
+
+    <description><![CDATA[]]></description>
+  </item>
+</channel>
+</rss>

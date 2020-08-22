@@ -1,4 +1,5 @@
 (require 'ox-publish)
+(require 'ox-rss)
 (setq org-publish-project-alist
       '(("blog-posts"
          :base-directory "org/posts/"
@@ -23,6 +24,7 @@
          :base-directory "org/"
          :base-extension "org"
          :publishing-directory "docs/"
+         :exclude "rss.org"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 4
@@ -41,8 +43,20 @@
          :recursive t
          :publishing-function org-publish-attachment
          )
+        ("blog-rss"
+         :base-directory "org/posts/"
+         :base-extension "org"
+         :recursive nil
+         :exclude ".*"
+         :include ("../rss.org")
+         :publishing-function (org-rss-publish-to-rss)
+         :publishing-directory "docs/"
+         :with-toc nil
+         :section-numbers nil
+         :title "Meg in Progress"
+         )
          ("blog"
-          :components ("blog-posts" "blog-pages" "blog-static"))
+          :components ("blog-posts" "blog-pages" "blog-static" "blog-rss"))
       ))
 
 

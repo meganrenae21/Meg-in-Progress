@@ -1,0 +1,12 @@
+* Blogging with Org Mode: An Update
+  :PROPERTIES:
+  :RSS_PERMALINK: https://meganrenae21.github.io/Meg-in-Progress/posts/blog-org-mode-pt-2.html
+  :PUBDATE:  <2020-08-22>
+  :ID:       D1B3A33D-FC83-4AC0-8E01-77558A90398E
+  :END:
+* How I built a simple static blog with org-mode
+  :PROPERTIES:
+  :PUBDATE:  <2020-08-11>
+  :RSS_PERMALINK: https://meganrenae21.github.io/Meg-in-Progress/posts/blogging-with-org-mode.html
+  :ID:       BB2E02B6-3C88-4711-8AE9-37D3E46F72C7
+  :END:

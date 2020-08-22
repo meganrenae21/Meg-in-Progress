@@ -1,0 +1,22 @@
+#+SETUPFILE: ~/Meg in Progress/org-templates/level-1.org
+
+#+INCLUDE: "../src/header.html" export html
+
+
+#+TITLE: Blogging with Org Mode: An Update
+#+CATEGORY: dev
+#+DATE: 2020-08-22
+#+FILENAME: blog-org-mode-pt-2
+
+* Blogging with Org Mode: An Update
+  **Saturday, August 22, 2020**
+
+  #+INCLUDE: "../../content/blog-org-mode-pt-2.org"
+
+  /Tagged: [[../tags/dev.org][dev]]/
+
+
+  #+INCLUDE: "../src/utterances.html" export html
+
+
+

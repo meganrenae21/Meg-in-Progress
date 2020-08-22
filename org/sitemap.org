@@ -1,5 +1,12 @@
 * Latest Posts
-** [[./posts/blogging-with-org-mode.org][How I built a simple static blog with org-mode]] || 08/11/20 Tue
+
+** [[./posts/blog-org-mode-pt-2.org][Blogging with Org Mode: An Update]]
+  **Saturday, August 22, 2020** \\
+In my [[./posts/blogging-with-org-mode.org][last post]], I went over how I set up this blog solely in org-mode. And since that post has been published, I've made a few more changes to the configuration and so, in an effort to provide the most up to date information, I figured I'd write a little addendum.
+  [[./posts/blog-org-mode-pt-2.org][Read more...]]\\
+  [[./tags/dev.org][dev]]
+
+** [[./posts/blogging-with-org-mode.org][How I built a simple static blog with org-mode]] || 08/11/20 Tue 
    /[[./tags/dev.org][dev]]/
    There's always something new to discover with emacs and org-mode, and building a blog was my way of wading into deeper waters - not longer content to just get my feet wet. 
-   [[./posts/blogging-with-org-mode.org][Read more...]]
+   [[./posts/blogging-with-org-mode.org][Read more...]]\\

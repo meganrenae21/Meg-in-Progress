@@ -12,5 +12,8 @@
 
 * Entries tagged dev:
 
+** [[../posts/blog-org-mode-pt-2.org][Blogging with Org Mode: An Update]]
+  08/22/20 Sat
+
 ** [[../posts/blogging-with-org-mode.org][How I built a simple static blog with org-mode]]
    08/11/20 Tue

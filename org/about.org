@@ -26,3 +26,4 @@ I'm Meg, a work in progress.
 + [[https://codepen.io/megan-durham][CodePen]]
 + [[https://www.instagram.com/meganrenaexoxo/][Instagram]]
 + [[https://github.com/meganrenae21][Github]]
++ [[https://dev.to/meganrenae21][dev.to]]

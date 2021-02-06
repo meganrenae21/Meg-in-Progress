@@ -5,13 +5,17 @@ body {
 }
 h2, h3, h4, h5, h6 {
   font-family: "Lucida Console", monaco, monospace;
-  color: #bd0064;
+  color: #550527;
   margin-bottom: 0;
-  text-shadow: 1.3px 1.3px rgb(190, 221, 203);
+  text-shadow: 1px 1px #4c6085;
+  margin-top: 0;
 }
 h2 {
-    border-bottom-style: dashed;
-    border-bottom-width: 2px;
+    background-color: rgba(174, 132, 126, 0.4);
+    border-bottom: 2px solid #550527;
+}
+h2 > a {
+    color: #550527;
 }
 h3 {
     padding-left: 2px;
@@ -35,14 +39,12 @@ h4, h5, h6 {
 div.outline-2,
 div.outline-3,
 div.outline-4 {
-    background-color: #E5DDE5;
+    background-color: #F5F5F5;
     border-style: solid;
-    border-color: #bd0064;
-    border-width: 1.3px;
-}
-div.outline-2,{
-    margin: 3.75px;
-    padding: 1px;
+    border-color: ##550527;
+    border-width: 3px;
+    margin-top: 30px;
+    box-shadow: 3px 3px #4c6085;
 }
 div.outline-3,
 div.outline-4,
@@ -62,20 +64,25 @@ a > h1 {
   color: #4C6085;
   margin: 30px;
   text-shadow: 4px 4px #550527;
-
 }
 a > h1:hover {
   text-shadow: none;
   transform: translate(2px, 2px);
 }
-a {
-  text-decoration: none;
-  color: #bd0064;
-  font-weight: bold;
+p > a {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: #ADB993;
+    font-weight: bold;
+}
+p > a:visited {
+    color: #ADB993;
 }
 a:hover {
-  font-weight: normal;
+    font-weight: normal;
+    text-decoration: none;
 }
+
 #mip-top {
   position: relative;
   margin: 0;

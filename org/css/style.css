@@ -7,17 +7,17 @@ h2, h3, h4, h5, h6 {
   font-family: "Lucida Console", monaco, monospace;
   color: #550527;
   margin-bottom: 0;
-  text-shadow: 1.5px 1.5px #4c6085;
   margin-top: 0;
 }
 h2 {
     background-color: rgba(174, 132, 126, 0.4);
     border-bottom: 2px solid #550527;
+    text-shadow: 1.5px 1.5px #4c6085;
 }
-h2, h3, h4, h5, h6 > a {
+h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     color: #550527;
 }
-h2, h3, h4, h5, h6 > a:visited {
+h2 > a:visited, h3 > a:visited, h4 > a:visited, h5 > a:visited, h6 > a:visited {
     color: #550527;
 }
 h3 {
@@ -122,6 +122,7 @@ a:hover {
   border-bottom-width: 0.5px;
   padding-top: 3px;
   font-family: monospace;
+  font-size: 15px;
 }
 .org-ul > li > a, .org-ul > li > a:visited {
     text-decoration: underline;
@@ -163,10 +164,11 @@ td, th {
     border-color: #550527;
     border-width: 1px;
     border-style: solid;
+    font-size: 16px;
 }
 table {
     border-collapse: collapse;
-    margin: 4px;
+    margin: 10px;
     background-color: #AE847E;
     box-shadow: 3px 3px 3px #ADB993;
 }
@@ -176,6 +178,7 @@ code {
     border-radius: 2px;
     letter-spacing: 0.1em;
     background-color: rgba(173, 185, 147, 0.7);
+    font-size: 15px;
 }
 pre.example {
     border-style: dashed;
@@ -189,6 +192,7 @@ pre.example {
     white-space: pre-wrap;
     margin-left: 3px;
     margin-right: 3px;
+    font-size: 16px;
 }
 
 dl.org-dl {
@@ -196,6 +200,7 @@ dl.org-dl {
     border-left-width: 0.5px;
     padding-left: 3px;
     margin-left: 3px;
+    font-size: 15px;
 }
 .org-dl > dt {
     font-weight: bolder;
@@ -205,6 +210,7 @@ dl.org-dl {
 .org-dl > dd {
     font-style: italic;
     font-style: monospace;
+    font-size: 15px;
 }
 
 div.footpara {
@@ -216,6 +222,7 @@ div.footpara {
 p.footpara {
     margin: 2px;
     padding: 0;
+    font-size: 15px;
 }
 div.footdef {
     margin-top: 5px;
@@ -226,4 +233,5 @@ div.footdef {
 }
 div.footdef > sup {
     display: table-cell;
+    font-size: 13px;
 }

@@ -110,28 +110,22 @@ a:hover {
   text-align: center;
   align-content: center;
   justify-content: center;
-  background-color: rgb(61, 61, 61, 0.2);
-  border-bottom-color: #bd0064;
-  border-bottom-width: 0.6px;
-  border-bottom-style: solid;
 }
 #navlink-1 > a,
 #navlink-2 > a,
 #navlink-3 > a {
   font-family: monospace;
   letter-spacing: 0.3em;
-}
-#navlink-1 {
-  border-left-style: solid;
-  border-left-color: #bd0064;
-  border-left-width: 0.6px;
+  color: #4C6085;
+  font-size: 20px;
 }
 #navlink-1,
 #navlink-2,
 #navlink-3 {
-  border-right-style: solid;
-  border-right-color: #bd0064;
-  border-right-width: 0.6px;
+    border: 3px solid #4c6085;
+    background-color: rgba(174, 132, 126, 0.5);
+    margin: 5px;
+    box-shadow: 2px 2px #550527;
 }
 th {
     text-weight: normal;

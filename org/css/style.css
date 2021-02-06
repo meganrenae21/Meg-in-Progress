@@ -69,18 +69,23 @@ a > h1:hover {
   text-shadow: none;
   transform: translate(2px, 2px);
 }
+a {
+    text-decoration: none;
+}
 p > a {
     text-decoration: underline;
     text-decoration-style: dashed;
-    color: #ADB993;
+    color: #4C6085;
     font-weight: bold;
+    text-shadow: 0.7px 0.7px #ADB993;
 }
 p > a:visited {
-    color: #ADB993;
+    color: #4C6085;
 }
 a:hover {
     font-weight: normal;
     text-decoration: none;
+    text-shadow: none;
 }
 
 #mip-top {
@@ -125,12 +130,13 @@ a:hover {
   letter-spacing: 0.3em;
   color: #4C6085;
   font-size: 20px;
+  text-decoration: none;
 }
 #navlink-1,
 #navlink-2,
 #navlink-3 {
     border: 3px solid #4c6085;
-    background-color: rgba(174, 132, 126, 0.5);
+    background-color: rgba(245, 245, 245, 0.8);
     margin: 5px;
     box-shadow: 2px 2px #550527;
 }

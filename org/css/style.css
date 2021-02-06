@@ -14,7 +14,10 @@ h2 {
     background-color: rgba(174, 132, 126, 0.4);
     border-bottom: 2px solid #550527;
 }
-h2 > a {
+h2, h3, h4, h5, h6 > a {
+    color: #550527;
+}
+h2, h3, h4, h5, h6 > a:visited {
     color: #550527;
 }
 h3 {
@@ -127,9 +130,7 @@ a:hover {
   align-content: center;
   justify-content: center;
 }
-#navlink-1 > a,
-#navlink-2 > a,
-#navlink-3 > a {
+#navlink-1 > a, #navlink-2 > a, #navlink-3 > a, #navlink-1 > a:visited, #navlink-2 > a:visited, #navlink-3 > a:visited {
   font-family: monospace;
   letter-spacing: 0.3em;
   color: #4C6085;

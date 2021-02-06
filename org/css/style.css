@@ -123,6 +123,13 @@ a:hover {
   padding-top: 3px;
   font-family: monospace;
 }
+.org-ul > li > a, .org-ul > li > a:visited {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: #4C6085;
+    font-weight: bold;
+    text-shadow: 0.7px 0.7px #ADB993;
+}
 #topnav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

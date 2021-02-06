@@ -7,7 +7,7 @@ h2, h3, h4, h5, h6 {
   font-family: "Lucida Console", monaco, monospace;
   color: #550527;
   margin-bottom: 0;
-  text-shadow: 1px 1px #4c6085;
+  text-shadow: 1.5px 1.5px #4c6085;
   margin-top: 0;
 }
 h2 {
@@ -56,6 +56,7 @@ p {
     font-family: monospace;
     margin-left: 3px;
     margin-right: 3px;
+    font-size: 16px;
 }
 a > h1 {
   font-family: "Lucida Console", monaco, monospace;
@@ -64,6 +65,9 @@ a > h1 {
   color: #4C6085;
   margin: 30px;
   text-shadow: 4px 4px #550527;
+}
+a:visited > h1 {
+    color: #4C6085;
 }
 a > h1:hover {
   text-shadow: none;
@@ -148,30 +152,30 @@ td, th {
     padding: 1px;
     font-weight: normal;
     font-family: monospace;
-    border-color: #bd0064;
+    border-color: #550527;
     border-width: 1px;
     border-style: solid;
 }
 table {
     border-collapse: collapse;
     margin: 4px;
-    background-color: #9CC7AD;
-    box-shadow: 3px 3px 3px #3d3d3d;
+    background-color: #AE847E;
+    box-shadow: 3px 3px 3px #ADB993;
 }
 code {
     border-style: dashed;
     border-width: 0.5px;
     border-radius: 2px;
     letter-spacing: 0.1em;
-    background-color: rgba(61, 61, 61, 0.2);
+    background-color: rgba(173, 185, 147, 0.7);
 }
 pre.example {
     border-style: dashed;
     border-width: 1px;
     border-radius: 7px;
     letter-spacing: 0.15em;
-    border-color: #bd0064;
-    background-color: rgba(61, 61, 61, 0.2);
+    border-color: #550527;
+    background-color: rgba(173, 185, 147, 0.2);
     padding-left: 5px;
     padding-top: 3px;
     white-space: pre-wrap;
@@ -209,7 +213,7 @@ div.footdef {
     margin-top: 5px;
     border-top-style: dashed;
     border-top-width: 0.5px;
-    background-color: rgba(61, 61, 61, 0.2);
+    background-color: rgba(173, 185, 147, 0.5);
     display: table;
 }
 div.footdef > sup {

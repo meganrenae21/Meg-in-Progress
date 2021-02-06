@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(160deg, #AE847E 0%, #AE847E 40%, #550527 40%, #550527 50%, #F5F5F5 50%, #F5F5F5 100%),
-                #F5F5F5;
-    background-position: fixed;
+    background-image: linear-gradient(160deg, #AE847E 0%, #AE847E 40%, #550527 40%, #550527 50%, #F5F5F5 50%, #F5F5F5 100%);
+    background-color: #F5F5F5;
+    background-attachment: fixed;
 }
 h2, h3, h4, h5, h6 {
   font-family: "Lucida Console", monaco, monospace;

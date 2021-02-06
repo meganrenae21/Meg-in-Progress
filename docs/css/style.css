@@ -81,10 +81,9 @@ a {
 }
 p > a {
     text-decoration: underline;
-    text-decoration-style: dashed;
+    text-decoration-style: dotted;
+    text-decoration-color: #adb993;
     color: #4C6085;
-    font-weight: bold;
-    text-shadow: 0.7px 0.7px #ADB993;
 }
 p > a:visited {
     color: #4C6085;
@@ -111,7 +110,7 @@ a:hover {
 .org-ul {
   list-style-type: none;
   font-family: monospace;
-  font-size: 12px;
+  font-size: 16px;
   margin-left: 3px;
   padding-left: 5%;
   width: 80%;
@@ -127,9 +126,8 @@ a:hover {
 .org-ul > li > a, .org-ul > li > a:visited {
     text-decoration: underline;
     text-decoration-style: dashed;
+    text-decoration-color: #ADB993;
     color: #4C6085;
-    font-weight: bold;
-    text-shadow: 0.7px 0.7px #ADB993;
 }
 #topnav {
   display: grid;

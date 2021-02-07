@@ -39,22 +39,16 @@ h4, h5, h6 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-div.outline-2,
-div.outline-3,
-div.outline-4 {
+
+div.outline-2 {
     background-color: #F5F5F5;
     border-style: solid;
-    border-color: ##550527;
+    border-color: #550527;
     border-width: 3px;
     margin-top: 30px;
     box-shadow: 3px 3px #4c6085;
 }
-div.outline-3,
-div.outline-4,
-div.outline-text-3,
-div.outline-text-4 {
-    border: none;
-}
+
 p {
     font-family: monospace;
     margin-left: 3px;
@@ -226,7 +220,7 @@ div.footdef {
     margin-top: 5px;
     border-top-style: dashed;
     border-top-width: 0.5px;
-    background-color: rgba(173, 185, 147, 0.5);
+    background-color: rgba(173, 185, 147, 0.9);
     display: table;
 }
 div.footdef > sup {

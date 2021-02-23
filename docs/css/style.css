@@ -1,6 +1,7 @@
 body {
-    background-image: linear-gradient(180deg, #AE847E 0%, #AE847E 40%, #550527 40%, #550527 50%, #F5F5F5 50%, #F5F5F5 100%);
-    background-color: #F5F5F5;
+   background-image: repeating-linear-gradient(180deg, transparent, transparent 10px, rgba(245, 245, 245, 0.5) 10px, rgba(245, 245, 245, 0.5) 11px),
+    linear-gradient(180deg, #550527, #8B786D 60%, #F5F5F5);
+}   
     background-attachment: fixed;
 }
 h2, h3, h4, h5, h6 {
@@ -30,7 +31,6 @@ h4, h5, h6 {
 }
 
 #content {
-  margin-top: 25%;
   margin-left: 10%;
   width: 80%;
   min-width: 900px;

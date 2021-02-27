@@ -1,6 +1,7 @@
 body {
    background-image: repeating-linear-gradient(180deg, transparent, transparent 10px, rgba(245, 245, 245, 0.5) 10px, rgba(245, 245, 245, 0.5) 11px),
-    linear-gradient(180deg, #550527, #8B786D 60%, #F5F5F5);
+                     linear-gradient(180deg, #550527, #8B786D 60%, #F5F5F5 100%);
+   background-size: 100% 100%;
 }   
     background-attachment: fixed;
 }
@@ -42,7 +43,7 @@ h4, h5, h6 {
 }
 
 div.outline-2 {
-    background-color: rgba(145, 145, 145, 0.9);
+    background-color: rgba(245, 245, 245, 0.9);
     border-style: solid;
     border-color: #550527;
     border-width: 1px;

@@ -1,0 +1,21 @@
+#+SETUPFILE: ~/Meg in Progress/org-templates/level-1.org
+
+#+INCLUDE: "../src/header.html" export html
+
+
+#+TITLE: What the Latest Impeachment Trial Says about the Current State of US Politics
+#+CATEGORY: politics
+#+DATE: 2021-02-27
+#+FILENAME: impeachment-constitutional-bad-faith
+
+* What the Latest Impeachment Trial Says about the Current State of US Politics
+  **Saturday, February 27, 2021**
+
+  #+INCLUDE: "../../content/impeachment-constitutional-bad-faith.org"
+
+  /Tagged: [[../tags/politics.org][politics]]/
+
+
+  #+INCLUDE: "../src/utterances.html" export html
+
+

@@ -3,6 +3,11 @@
 #+TITLE: Meg in Progress - Archives
 #+SETUPFILE: ~/Meg in Progress/org-templates/level-0.org
 
+* 2021
+** February
+*** [[./posts/impeachment-clarifies-gop-position.org][The Latest Impeachment Trial Clarified the GOP's Position]] 02/27/21
+
+
 * 2020
 ** August
 *** [[./posts/blog-org-mode-pt-2.org][Blogging with Org Mode: An Update]] 08/22/20

@@ -1,0 +1,38 @@
+* TR Brainstorm
+** GTD Components in Org
+*** Inbox = Org Capture
+*** Task Management System:
+**** The "todo.org" file
+**** The "projects.org" file
+*** The workflow
+**** Next actions with "NEXT" tag
+**** The agenda structure for maintaining short to do lists for each day
+*** Review files:
+**** Daily and weekly logs
+**** Templates file
+**** The "currently.org" file
+*** References folder 
+**** Filing system
+*** The "someday.org" file
+*** Calendar/ Tickler file
+**** Org-Journal implementation
+** Other Non-GTD specific components
+*** Habit tracker
+*** Level 10 Life tracker 
+*** Collections folder - Bullet Journal implementation
+*** Using One Drive for syncing
+** References and Resources
+*** Skillshare class
+*** Workflow map from reddit
+
+* BR Notes
+
+* Post
+In my previous two posts[fn:parts [[../docs/posts/blogging-with-org-mode.html][1]] and [[../docs/posts/blog-org-mode-pt-2.html][2]]]  I wrote about how I was using org-mode to publish this blog. But the ability to export org-mode projects to a public website or blog is only a cherry on top of the sundae that is org-mode and emacs. As such, those posts didn't really begin to explore just all that org-mode is capable of. Perhaps the most popular implementation is as a Getting Things Done, or GTD[fn: a method introduced in the popular productivity how-to book /[[https://www.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563/ref=sr_1_1?dchild=1&keywords=Getting+Things+Done&qid=1599422442&sr=8-1][Getting Things Done]]/ by David Allen]. I am certainly not the first person to share their org-mode GTD set-up[fn:if you have time [[http://doc.norang.ca/org-mode.html][this comprehensive document]] is worth it, as is [[http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html][this shorter but still highly-detailed overview]].], and I am definitely not going to tell you I've totally figured it out and my set-up will not change at all in the future. Like I said in the past, I'm still an emacs and org-mode novice. I'm just figuring it out as a go, but let me share what I'm doing with this right now.
+
+* /Getting Things Done/: an overview
+If you could narrow the GTD philosophy to one sentence, it would be this: "Your brain is for processing information, not for storing it"[fn:This is a paraphrase from Allen's book, and has been repeated in some way or another by thousands (at least)  of GTD followers]. To that end comes a system devised so that you don't have to think of your to do items until their time comes due and to give your brain a break when it comes to remembering all that you need to do. It's this simple, straight-forward (and, let's be honest, completely obvious) idea that has developed a bit of a cult following among online productivity and planning communities, probably because it comes with a straight-forward and adaptable methodology that requires no special or intricate knowledge or expensive equipment and supplies. 
+
+Here is a visual overview of how the system works:
+
+

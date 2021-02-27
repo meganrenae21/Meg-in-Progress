@@ -1,0 +1,68 @@
+* Milking the Minimum Wage: Laughably Bad Economic Lesson on Facebook
+
+I've recently come across a image being shared on Facebook, mostly by conservative Americans eager to find defects in the progressive plans being considered by the Joe Biden administration and the Democratic party. These "defects" can be minor or major, and real or imagined - but mostly imagined. This particular image, a block of text making an argument against raising the minimum wage, is perhaps the most astounding example I've seen so far of the absurd cognitive leaps certain people will take to justify both their stance against policies that would help millions, and their loyalty to a former president who was undeniably the world's biggest laughingstock for the past four years and who left office in disgrace after his attempt to stage a coup and override the democratic will of the people failed miserably and he showed himself for the traitor he is.
+
+What I'm saying is: it's bad. It's real bad. 
+
+I'm not going to share the image here, since it's almost all text, save for a picture of a gallon of milk and a dollar bill. I'll just transcribe it verbatim in all of its foolishness (I made no grammatical or punctuation or spelling changes).
+
+#+BEGIN_QUOTE
+*Raising minimum wage is a bad idea.*
+
+Let's say milk costs $1.00
+
+and lets say
+
+You make 1.23 a day.
+After taxes, you bring home $1.00
+
+Right now you can afford one gallon per day.
+
+So now you get a minimum wage raise to $18.45 a day. That's awesome!! You have more money right? Well now in order to stay in business the milk man hsa to pay his employees that same $18.45, so the cost of milk goes to $15.00 a gallon. No big deal, you can still afford it right? Well no, you can't.
+You see thanks to the minimum wage increase that you are begging for you've moved up to a new tax bracket. No instead of 23% you pay 29%.
+18.45 - 29%=$13.10. You can no longer afford the milk you once could. Let that sink in a minute.
+
+*The only winner in*
+*raising minimum wage is*
+*THE GOVERNMENT!*
+#+END_QUOTE
+
+Well, that was a trip, wasn't it? I have attempted to put this argument in its proper context, which is a fantasy world where:
+
++ You only make $1.23 /per day/ and spent the entirety of your net income on your gallon-a-day milk addiction
++ Despite only making $1.23 a day, or (assuming you work 365 days a year) $448.95 a year, you still pay ~18.7%  income tax
++ ~18.7% is equal to 23% (rather than the real-world math that says 23% of *1.00* [not 1.23] is 0.23)
++ The minimum wage is increased 1500% overnight
++ An increase in your salary from $448.95 per year (1/22 of the poverty line) to $6734.25 per year (1/10 of the poverty line) - again, assuming you work 365 days a year - moves you up to an entirely new tax bracket
++ Going up a tax bracket means you pay that same rate on your *entire* income
++ Increasing prices is a mechanism to recoup money from paying higher wages, and not a product of the "invisible hand" of the market and the law of supply and demand
++ Somehow, the government of a democratic republic benefits when average Joe Citizen dies from withdrawal because he couldn't afford his milk fix
+
+Obviously, none of that bears any resemblence to reality. Somewhere in this nonsense is a miniscule grain of truth that has been twisted into something else entirely. That grain of truth is that increasing the minimum wage would cause prices of most products to rise. Not dramatically, not in a way that would make previously affordable items /unaffordable/, not in a way that would completely offset the benefits of raising the minimum wage, but still, it would probably be noticeable to the observant eye. This person seems to be arguing that a 1500% increase in the minimum wage will cause a 1500% in prices, which is utterly absurd for a myriad of reasons (not the least of which is such a dramatic increase is not and has never been on the table). 
+
+Given how much misinformation and misleading propaganda has tainted political discourse in this day and age, especially with the flourishing of social media platforms which provide a method for spreading lies easily and with little consequence, I believe that everyone has a civic responsibility to examine the rhetoric they share critically and with a healthy dose of skepticism. In particular, we should /all/ be skeptical of /any/ rhetoric that fits our biases (and we should be cognizant of our biases: that is, acknowledge we have them [because everyone does], and confront them when necessary). We can solidify our confidence in our beliefs when we consistently fail to disprove them despite our best efforts. That is the scientific method, which has been tried and tested and has shown itself to be the best way to gauge truth in a complicated, messy world.
+
+The issue is that there are swaths of the people in the world who have developed hardcore passionate opinions about subject but have never learned this critical skill. I took one logic and critical thinking class in college, and it was an elective. If I learned about logical fallacies in high school, it was only in passing - there was no dedicated curriculum to the subject. So here we are in the information age, inundated with messaging everywhere we turn. We receive so much data from so many perspectives that it's almost impossible to make sense of it all. Sorting fact from fiction is a full-time job. People don't really have much extra time or energy to research or learn a new skill on top of everything else that society expects of us. 
+
+It is in that context that this post has gone viral on Facebook. That's why I've decided to start an ongoing series on this blog to analyze and look critically at some of the "informative" content that gets widely shared on social media. I'm starting by going over the post above to highlight how it takes liberty with reality and to engage the underlying topic in *this* reality. The list I made above is a bird's eye summarization of the sheer amount of nonsense it posits, but I also want to take a deeper look in a few spots. I can nitpick over the bad math and the weird dystopia in which the story takes place where the working class is controlled by the milk kingpins, but I'd end up with a novel and George Orwell already wrote /Animal Farm/. 
+
+** The history and current context of the minimum wage battle
+
+In the United States, the federal minimum wage is $7.25 per hour, though 29 states plus the District of Columbia have have a higher minimum wage, and several municipalities have their own laws. Tipped workers have an even lower minimum wage, at $2.13 per hour (the expectation being they will earn the remainder in tips). Five states -- Tennessee, Louisiana, Missippi, Alabama, and South Carolina -- don't have a minimum wage law. To be clear, and perhaps to state the obvious, employers in the U.S. have to obey federal employment law, and states and local governments can pass and enforce stricter laws if they wish. Two states -- Wyoming and Georgia -- have a minimum wage that lower than the federal. In such a case employees are still be entitled to the higher federal limit.[fn:7f29f5e267cc274: To dig deeper into each state's own laws, the Economic Policy Institute has a [[https://www.epi.org/minimum-wage-tracker/][minimum wage tracker]] with a lot of detail regarding the various state and local laws throughout the U.S.] [fn:1bf633c80724d5eb: [[https://www.dol.gov/agencies/whd/minimum-wage/state][The Department of Labor]] also has a publicly available dataset detailing the state laws]
+
+One important key to understanding the economic reasons for raising the minimum wage is to know that, while currently it is the highest it has ever been (since it was last changed in 2009), when adjusted for inflation the minimum wage is worth much less than it once was. In 1968, the minimum wage was $1.60 per hour -- $1.60 in 1968 would be worth close to $12 today.[fn:7a4d1f5114a4539: In 2019, [[https://www.cnn.com/interactive/2019/business/us-minimum-wage-by-year/index.html][CNN Business published this very helpful graph]] that reveals the history of the minimum wage adjusted for inflation] 
+
+But keeping up with inflation is only the moderate side of the debate. Since the federal minimum wage was implemented in 1938 under Franklin Delano Roosevelt (then at 25 cents an hour), it has seen regular hikes through the years for this purpose (the last one all the way back in 2009, though). It would seem the bare minimum to expect from the law would be that what workers bring home in 2021 would be at least equivalent to what workers brought home 50 years ago. 
+
+When you take into account that employee productivity has steadily risen over the past century or so, you may feel like wages should keep the same pace. And, until 1968, that was the case. Since then, the adjusted minimum wage has stagnated. Workers are more than twice as productive today than they were in 1968. This means that not only are workers today taking home what is effectively less money overall, but they are making more money for their employers.[fn:1a12932a58fef3f5: [[https://cepr.net/this-is-what-minimum-wage-would-be-if-it-kept-pace-with-productivity/][The Center for Economic and Policy Research has tracked this particular history]]] 
+
+To put it in overly simplistic terms: a fictional company in the past made $5 million in gross revenue (that is, the total of what the company made, without subtracting expenses). They paid $1 million in employee salaries, or 1/5 of their total revenue. Today, that same company makes $12 million, but only $800,000 of that goes toward salaries.[fn:193bc3fad3e7fd41: Yes, I made up this fictional company but the numbers are based on the actual data I've provided in the links in these footnotes - unlike whoever wrote this meme we're talking about, who got some random numbers from a fortune cookie or something]
+
+
+ 
+
+
+
+
+
+

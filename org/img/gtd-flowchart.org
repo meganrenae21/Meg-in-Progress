@@ -1,0 +1,7 @@
+#+BEGIN_SRC ditaa :file gtd-workflow.png
++-------+      +-------+
+|       |      |       |
+| STUFF |----> | INBOX |
+|       |      |       |
++-------+      +-------+
+#+END

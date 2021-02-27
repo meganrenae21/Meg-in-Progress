@@ -1,7 +1,6 @@
 * Latest Posts
 ** [[../posts/impeachment-clarifies-gop-position.org][What the Latest Impeachment Trial Says about the Current State of US Politics]]
    02/27/21 Sat
-   #+INCLUDE: "./posts/impeachment-clarifies-gop-position.org::*What the Latest Impeachment Trial Says about the Current State of US Politics" :lines 1-6
    [[./posts/impeachment-clarifies-gop-position.org][Read more...]]
    [[./tags/politics.org][politics]]
 

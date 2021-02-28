@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Abel&display=swap);
+
 body {
    background-image: repeating-linear-gradient(180deg, transparent, transparent 10px, rgba(245, 245, 245, 0.5) 10px, rgba(245, 245, 245, 0.5) 11px),
                      linear-gradient(180deg, #550527, #8B786D 60%, #F5F5F5 100%);
@@ -5,7 +9,7 @@ body {
    background-attachment: fixed;
 }
 h2, h3, h4, h5, h6 {
-  font-family: "Lucida Console", monaco, monospace;
+    font-family: Poppins;
   color: #550527;
   margin-bottom: 0;
   margin-top: 0;
@@ -40,6 +44,16 @@ h4, h5, h6 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+blockquote {
+    padding-left: 0;
+    border-left: 2px solid #8B786D;
+    border-bottom: 1px solid #8b786D;
+    font-style: italic;
+    font-family: Abel;
+    font-size: 20px;
+    margin-left: 10%;
+    background-color: rgba(245, 245, 245, 0.6);
+}
 
 div.outline-2 {
     background-color: rgba(245, 245, 245, 0.9);
@@ -51,13 +65,13 @@ div.outline-2 {
 }
 
 p {
-    font-family: monospace;
-    margin-left: 3px;
-    margin-right: 3px;
-    font-size: 16px;
+    font-family: Abel;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 22px;
 }
 a > h1 {
-  font-family: "Lucida Console", monaco, monospace;
+  font-family: Poppins;
   text-align: center;
   font-size: 90px;
   color: #4C6085;
@@ -104,7 +118,7 @@ a:hover {
 }
 .org-ul {
   list-style-type: none;
-  font-family: monospace;
+  font-family: Abel;
   font-size: 16px;
   margin-left: 3px;
   padding-left: 5%;
@@ -132,7 +146,7 @@ a:hover {
   justify-content: center;
 }
 #navlink-1 > a, #navlink-2 > a, #navlink-3 > a, #navlink-1 > a:visited, #navlink-2 > a:visited, #navlink-3 > a:visited {
-  font-family: monospace;
+  font-family: Abel;
   letter-spacing: 0.3em;
   color: #4C6085;
   font-size: 20px;
@@ -153,7 +167,7 @@ th {
 td, th {
     padding: 1px;
     font-weight: normal;
-    font-family: monospace;
+    font-family: Abel;
     border-color: #550527;
     border-width: 1px;
     border-style: solid;

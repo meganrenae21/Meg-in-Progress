@@ -15,6 +15,7 @@
 
   /Tagged: [[../tags/politics.org][politics]]/
 
+/Crossposted on [[https://meganrenae21.medium.com/what-the-latest-impeachment-trial-says-about-the-current-state-of-us-politics-da520918b469][Medium]]/
 
   #+INCLUDE: "../src/utterances.html" export html
 

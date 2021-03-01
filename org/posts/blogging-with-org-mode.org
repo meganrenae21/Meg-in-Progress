@@ -315,4 +315,6 @@ In short, this is a work in progress - just like me.
 
   /Tagged: [[../tags/dev.org][dev]]/
 
+/Crossposted on [[https://dev.to/meganrenae21/how-i-built-a-simple-static-blog-with-org-mode-4b4l][dev.to]]/
+
 #+INCLUDE: "../src/utterances.html" export html

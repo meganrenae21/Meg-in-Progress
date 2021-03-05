@@ -1,13 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-03-04 Thu 20:17 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to solve Congress's minimum wage dilemma</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="Megan Durham">
-<link rel="stylesheet" type="text/css" href="../css/style.css"><script type="text/javascript" src="../js/script.js"></script>
+<!-- 2021-03-04 Thu 20:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Megan Durham" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -57,205 +242,82 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6b647f1">1. Latest Posts</a>
+<ul>
+<li><a href="#org8373b8c">1.1. How to solve Congress's minimum wage dilemma</a></li>
+<li><a href="#orge0d89af">1.2. What the Latest Impeachment Trial Says about the Current State of US Politics</a></li>
+<li><a href="#orgb023c63">1.3. Blogging with Org Mode: An Update</a></li>
+<li><a href="#org160c496">1.4. How I built a simple static blog with org-mode || 08/11/20 Tue</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div id="outline-container-org6b647f1" class="outline-2">
-<h2 id="org6b647f1">Latest Posts</h2>
-<div class="outline-text-2" id="text-org6b647f1">
-<p>
-#+BEGIN<sub>lines</sub>
-</p>
+<h2 id="org6b647f1"><span class="section-number-2">1</span> Latest Posts</h2>
+<div class="outline-text-2" id="text-1">
 </div>
-</div>
-
-<div id="outline-container-org44b7e3d" class="outline-2">
-<h2 id="org44b7e3d">How to solve Congress's minimum wage dilemma</h2>
-<div class="outline-text-2" id="text-org44b7e3d">
+<div id="outline-container-org8373b8c" class="outline-3">
+<h3 id="org8373b8c"><span class="section-number-3">1.1</span> <a href="./posts/senate-covid-relief-minimum-wage.html">How to solve Congress's minimum wage dilemma</a></h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-<b><b>Thursday, March 04, 2021</b></b>
+<b><b>Thursday, March 4, 2021</b></b>
+  Last week the United States House of Representative passed the $1.9 trillion COVID-19 relief package, a massive bill that should give long-overdue and desparately-needed assistance to struggling Americans. Included in the bill was a provision to increase the federal hourly minimum wage over a four-year period to reach $15 per hour. The wage increase has been a hotly debated issue within Congress and its fate large depended the determination of the Senate parliamentarian on whether it qualified to be part of the Senate budget reconciliation package. In the end, and perhaps not very surprisingly, the Senate parliamentarian, Elizabeth MacDonough, decided it did not. It's a complicated bureaucratic issue that I will attempt to explain in the simplest terms possible, though I admit to not having the deepest understanding of the nuances of the problem. 
 </p>
 
 <p>
-<i>Tagged: <a href="../tags/politics.html">politics</a></i>
-</p>
-
-
-<p>
-   #+END<sub>lines</sub>
-  #+BEGIN<sub>lines</sub>
-Last week the United States House of Representative passed the $1.9 trillion COVID-19 relief package, a massive bill that should give long-overdue and desparately-needed assistance to struggling Americans. Included in the bill was a provision to increase the federal hourly minimum wage over a four-year period to reach $15 per hour. The wage increase has been a hotly debated issue within Congress and its fate large depended the determination of the Senate parliamentarian on whether it qualified to be part of the Senate budget reconciliation package. In the end, and perhaps not very surprisingly, the Senate parliamentarian, Elizabeth MacDonough, decided it did not. It's a complicated bureaucratic issue that I will attempt to explain in the simplest terms possible, though I admit to not having the deepest understanding of the nuances of the problem. 
-</p>
-
-<p>
-Quick rundown of the basic legislative process: a bill only needs a simple majority to pass through the House of Representative and then the Senate, and if it passes both tests, it arrives at the President's desk to be signed into law (or vetoed which sends it back to Congress all over again but that's another story). Here's the thing, though: Senate procedures don't limit the amount of time a bill can or must be debated before receiving a vote on the floor, which makes it possible to filibuster a bill indefinitely. The Senate can vote to end debate on a bill through Cloture, which requires 60 votes from the 100-member body. Currently, the Senate is split 50-50 among Republican and Democrats, and the Constitution grants Vice President Kamala Harris the power to cast tie-breaking votes when there's a stalemate, effectively granting Democrats the slimmest possible majority. Rebpulicans still have the power to stop most legislation from receiving an up-and-down vote on the floor. 
-</p>
-
-<p>
-Therein lies the problem with getting COVID relief passed. In his first days in office, President Biden unveiled his plan which ended up being immensely popular across party lines &#x2013; just not in Congress. A group of "moderate" Republicans met with President Biden to discuss a counter option, which only amounted to 1/3 of the relief Biden was offering. Perhaps it's understandable why these Republicans would be eager to make "fiscal responsibility" the central focus of their platform again after the previous four years, but it's difficult to convince everyday citizens about the terrors of "big government spending" in the midst of a pandemic that's killed half a million Americans. Still, without support from Republican Senators, the bill would be dead on arrival if it followed the standard process. 
-</p>
-
-<p>
-Instead, Democrats opted to use a process known as "Budget Reconciliation", used for certain fiscal legislation relating to tax, spending, and the debt limit. The good news: budget reconciliation is not subject to the Senate filibuster, meaning it could pass without any Republican support. However, reconciliation is limited to matters directly related to the budget areas I just mentioned - taxes, spending, and the debt limit. While stimulus checks and unemployment benefits and other relief bundled into this plan certainly meet this requirement, increasing the minimum wage was always going to be questionable. 
-</p>
-
-<p>
-While the increase would certainly have a significant impact on federal income taxes, this is an indirect consequence. The purpose of the provision is not to raise federal revenue through taxes (and if it was, there are far more efficient methods to do so). The provision doesn't relate to any government spending initiatives, and it doesn't concern the debt limit. Democrats were hoping that the parliamentarian would have a broader interpretation of what would qualify under budget reconciliation, but the parliaentarian is (and rightly so, I might add) a non-partisan official and not subject to political maneuvering or demands. 
-</p>
-
-<p>
-Progressives, particularly those in the House, have been outspoken about MacDonough's ruling. To be quite honest, many of their comments have angered me. To lay this at the feet of a public servant simply doing her job, even going so far as to call for her to be fired, is nothing short of appalling. Many have repeated the descriptor of "unelected official", which also applies to Supreme Court Justices and federal judges. She is "blocking" the legislation that millions of people desperately need, they say. I'm sorry, but that is pathetic and those spouting this narrative should be called out. I'm disappointed that Bernie Sanders, who I have the utmost respect for, has taken to scapegoating her when this outcome was entirely foreseeable. 
-</p>
-
-<p>
-The truth is, when forging this plan, Democrats could have done more to ensure the proposed hike was attached to programs <b>directly</b> related to government spending and taxes. It was only when MacDonough made the ruling that Sanders and Senator Ron Wyden explored a "Plan B" in this vein. This proposal included tax incentives and penalties for employers, but was abandoned because, according to a report from <a href="https://thehill.com/homenews/senate/540938-senate-democrats-nix-plan-b-on-minimum-wage-hike">The Hill</a>, "there were concerns that working out the details could slow down the overall coronavirus bill." If, perhaps, they hadn't been in such a scramble so late in the process, but had anticipated this snag from the very beginning, they could have gotten this done. Now, President Biden is eager to pass the COVID bill before unemployment benefits run out on March 14. 
-</p>
-
-<p>
-So what are the options moving forward? Here are a few of the possibilities.
-</p>
-</div>
-
-<div id="outline-container-orgd7b8ccc" class="outline-3">
-<h3 id="orgd7b8ccc">Through Budget Reconciliation</h3>
-<div class="outline-text-3" id="text-orgd7b8ccc">
-<p>
-<b><b>Path 1: Overruling the parliamentarian</b></b>
-</p>
-
-<p>
-This is a possibility that has caused a lot of stir in the media. If 100% of the Democrats wanted, and Kamala Harris and Joe Biden were on board, they <b>could</b> theoretically just ignore the parliamentarian and the Byrd Rule and pass the legislation, complete with the minimum wage increase, anyway. But I think this is out of the question at this point. Honestly, after the previous presidency, I am weary of any attempt to flout rules and procedures in the face of any resistance, essentially counting on the impunity that comes from the limited enforceability of those standards. You can't really pick and choose when to respect precedent and norms. It doesn't matter that this time it's for a good cause, because that won't always be the case. 
-</p>
-
-<p>
-The fact that this would need unanimous consent from Senate Democrats makes it a non-starter. It's been suggested that the democrats force a vote anyway, as a way to dare opponents to vote against the COVID relief bill in its entirety, but given the emergency situation and the millions of people who are desperate for <b>immediate</b> assistance, I don't imagine this is a risk most would be willing to take. 
-</p>
-
-<p>
-Bottom line: this is not going to happen, and really should have never been suggested. It's playing with fire. 
-</p>
-
-<p>
-<b><b>Path 2: "Plan B" continued</b></b>
-</p>
-
-<p>
-Now, the 2022 fiscal year will start on October 1, 2021. The current reconciliation bill is for the 2021 fiscal year, which began in October 2020. This means that beginning in October of this year, Congress will have a chance to consider another budget reconciliation bill for the 2022 fiscal year. Wyden and Sanders backed off of their "Plan B" involving tax penalties and incentives due to the timing issue in getting this bill passed, but Democrats would have time to work out the details in the coming months before drafting legislation for the next reconciliation. 
-</p>
-
-<p>
-At the moment, this seems to me to be the path of least resistance. I think it warrants serious consideration. It would also take the most work in the drafting and planning process. This is the option that calls for the most imagination, and would involve a fair amount of debate and creative problem solving. That could be a good thing &#x2013; if Americans could witness their elected officials putting their minds together to accomplish something for the common good, it could engender in the public a greater trust in government and the legislative process, something that is sorely missing. 
-</p>
-
-<p>
-This may be the likeliest option that involves getting the full $15 passed this year. If I was one to make bets, this would be mine.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org988b5c0" class="outline-3">
-<h3 id="org988b5c0">Through separate legislation</h3>
-<div class="outline-text-3" id="text-org988b5c0">
-<p>
-<b><b>Path 3: Kill the filibuster</b></b>
-</p>
-
-<p>
-Without a doubt, this is the most straightforward option. This would invovle the fewest concessions, since there's no need to worry about negotiating with Republicans or adhering to strict rules regarding the scope of the legislation. While I do think it would be best to pass a minimum wage increase on its own (rather than through reconciliation), this may end up challenging moderates who have shown signs of resistance to increasing the minimum wage to $15, like Senator Joe Manchin, who suggested he'd support an increase to $11 per hour. 
-</p>
-
-<p>
-I say that because I don't believe Manchin would have voted against the COVID relief bill even if the parliamentarian had allowed the $15 provision to stay in. I might be wrong, but the enormity of the bill itself would, I think, have made it impossible for Manchin to justify a vote against on the basis of a single provision. In a standalone bill, that protection wouldn't be there. Still, if a $15 minimum wage as currently proposed were to get an up and down floor vote in the Senate as its own bill, I'm guessing Democrats would unite behind it. A bill doesn't need to be perfect to vote for; it just needs to be better than the alternative. 
-</p>
-
-<p>
-The dilemma in this route is, of course, the challenge of voting to kill the filibuster in the Senate. Though it only requires a simple majority, several Senate Democrats have taken stances against the move, some more firm than others. The more that Senate Republicans block Democrat-sponsored legislation from receiving a floor vote, the more incentive those Democrats have to change their minds. 
-</p>
-
-<p>
-In the end, the biggest challenge will be ending the filibuster. If the Democrats manage to do it, they should have an easier time getting the minimum wage hike to pass. 
-</p>
-
-<p>
-<b><b>Path 4: Bipartisan Compromise</b></b>
-</p>
-
-<p>
-Finally, we have the most groan-inducing path: conceding $15 and coming to a bipartisan agreement on a smaller wage hike, perhaps $11 per hour. This would be the method of last resort. Before rejecting the option out of hand, consider that the proposed $15 wage hike was to be implemented over four years, with the minimum wage not peaking at $15 per hour until 2025. If the Senate could ensure an increase to $11 over the next year or two years, there's still a chance to move forward toward $15 without changing the original timeline. 
-</p>
-
-<p>
-This plan would bank on Democrats gaining more Senate seats in 2022, which is no guarantee. I doubt that this could get through in 2021, as Democrats would want to exhaust every other possible option. If we get to January 2022 and are still no closer to getting the minimum wage raise passed, this might have a chance. A small increase is superior to no increase, but it won't satisfy voters. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orga3e5fc0" class="outline-3">
-<h3 id="orga3e5fc0">Through a patchwork system</h3>
-<div class="outline-text-3" id="text-orga3e5fc0">
-<p>
-<b><b>Path 5: Go through state and local laws</b></b>
-</p>
-
-<p>
-Many conservatives and moderates believe that the minimum wage should not be the purview of the federal government. The justification of this argument is that the cost of living varies drastically across the United States. A comfortable living wage in one location is a poverty wage in another. That also goes to how much employers, especially small businesses, can afford to pay their employees before staffing costs begin to affect the availability of jobs. Studies have been mixed in terms of showing a correlation between raising the minimum wage and unemployment rates. Given that areas with a low cost of living also tend to be areas with lower minimum wage requirements, I don't think it's out of the question that a state like Oklahoma may see negative impacts from the raise that a state like California would be insulated from. 
-</p>
-
-<p>
-In my opinion, the federal minimum wage is meant to be just that &#x2013; a <i>minimum</i>. If the federal minimum wage is $15 across the United States, then in places like New York or San Francisco it should be much higher. I think it's valid for local and state governments to set their own laws according to the unique needs of their economies. But in order to justify abolishing the federal minimum wage altogether and leaving it completely up to the states, you'd have to convince me that every state is up to the challenge of taking care of their residents. To be frank, several states have continuously failed that challenge, including my own. 
-</p>
-
-<p>
-States' rights end at the oppression of their citizens. At that point, it is the responsibility of the federal government to step in. So, if a state doesn't want the government involved in setting their minimum wage, it needs to step up and provide for its people - then there'd be no need for this discussion to be national. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org91fc60e" class="outline-3">
-<h3 id="org91fc60e">Now what?</h3>
-<div class="outline-text-3" id="text-org91fc60e">
-<p>
-At the moment, I believe the top priority for Congress should be passing COVID-19 relief and getting immediate assistance out to US families. The wage increase will most likely not be included in this package, but I don't think that's the end of it. I am a big advocate of never letting yourself be convinced that you've thought of every possible solution. When you halt imagination, stalemates occur. Over the next weeks and months, I hope the Democrats keep exploring every nook and cranny they can think of to make this a reality, rather than stubbornly fixate on one or two apparent solutions and declare defeat when they fail to come through. Victory is usually in the last place you look.
-  #+END<sub>lines</sub>
- <a href="./posts/senate-covid-relief-minimum-wage.html">Read more&#x2026;</a> <br>
-   <a href="./tags/politics.html">politics</a>
+ Quick rundown of the basic legislative process: a bill only needs a simple majority to pass through the House of Representative and then the Senate, and if it passes both tests, it arrives at the President's desk to be signed into law (or vetoed which sends it back to Congress all over again but that's another story). Here's the thing, though: Senate procedures don't limit the amount of time a bill can or must be debated before receiving a vote on the floor, which makes it possible to filibuster a bill indefinitely. The Senate can vote to end debate on a bill through Cloture, which requires 60 votes from the 100-member body. Currently, the Senate is split 50-50 among Republican and Democrats, and the Constitution grants Vice President Kamala Harris the power to cast tie-breaking votes when there's a stalemate, effectively granting Democrats the slimmest possible majority. Rebpulicans still have the power to stop most legislation from receiving an up-and-down vote on the floor. 
+<a href="./posts/senate-covid-relief-minimum-wage.html">Read more&#x2026;</a> <br />
+  <a href="./tags/politics.html">politics</a>
 </p>
 </div>
 </div>
 
 
 <div id="outline-container-orge0d89af" class="outline-3">
-<h3 id="orge0d89af"><a href="./posts/impeachment-clarifies-gop-position.html">What the Latest Impeachment Trial Says about the Current State of US Politics</a></h3>
-<div class="outline-text-3" id="text-orge0d89af">
+<h3 id="orge0d89af"><span class="section-number-3">1.2</span> <a href="./posts/impeachment-clarifies-gop-position.html">What the Latest Impeachment Trial Says about the Current State of US Politics</a></h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-   <b><b>02/27/21 Sat</b></b> <br>
+   <b><b>02/27/21 Sat</b></b> <br />
 On the weekend before Last, the US Senate concluded the second impeachment trial of former president Donald Trump, who had been impeached for inciting the insurrection at the US Capitol on January 6..
-   <a href="./posts/impeachment-clarifies-gop-position.html">Read more&#x2026;</a> <br>
+   <a href="./posts/impeachment-clarifies-gop-position.html">Read more&#x2026;</a> <br />
    <a href="./tags/politics.html">politics</a>
 </p>
 </div>
 </div>
 
 <div id="outline-container-orgb023c63" class="outline-3">
-<h3 id="orgb023c63"><a href="./posts/blog-org-mode-pt-2.html">Blogging with Org Mode: An Update</a></h3>
-<div class="outline-text-3" id="text-orgb023c63">
+<h3 id="orgb023c63"><span class="section-number-3">1.3</span> <a href="./posts/blog-org-mode-pt-2.html">Blogging with Org Mode: An Update</a></h3>
+<div class="outline-text-3" id="text-1-3">
 <p>
-  <b><b>Saturday, August 22, 2020</b></b> <br>
+  <b><b>Saturday, August 22, 2020</b></b> <br />
 In my <a href="./posts/blogging-with-org-mode.html">last post</a>, I went over how I set up this blog solely in org-mode. And since that post has been published, I've made a few more changes to the configuration and so, in an effort to provide the most up to date information, I figured I'd write a little addendum.
-  <a href="./posts/blog-org-mode-pt-2.html">Read more&#x2026;</a><br>
+  <a href="./posts/blog-org-mode-pt-2.html">Read more&#x2026;</a><br />
   <a href="./tags/dev.html">dev</a>
 </p>
 </div>
 </div>
 
 <div id="outline-container-org160c496" class="outline-3">
-<h3 id="org160c496"><a href="./posts/blogging-with-org-mode.html">How I built a simple static blog with org-mode</a> || 08/11/20 Tue</h3>
-<div class="outline-text-3" id="text-org160c496">
+<h3 id="org160c496"><span class="section-number-3">1.4</span> <a href="./posts/blogging-with-org-mode.html">How I built a simple static blog with org-mode</a> || 08/11/20 Tue</h3>
+<div class="outline-text-3" id="text-1-4">
 <p>
 <i><a href="./tags/dev.html">dev</a></i>
 There's always something new to discover with emacs and org-mode, and building a blog was my way of wading into deeper waters - not longer content to just get my feet wet. 
-<a href="./posts/blogging-with-org-mode.html">Read more&#x2026;</a><br>
+<a href="./posts/blogging-with-org-mode.html">Read more&#x2026;</a><br />
 </p>
 </div>
 </div>
 </div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Megan Durham</p>
+<p class="date">Created: 2021-03-04 Thu 20:30</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

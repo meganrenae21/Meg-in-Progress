@@ -1,4 +1,10 @@
 * Latest Posts
+** [[./posts/senate-covid-relief-minimum-wage.org][How to solve Congress's minimum wage dilemma]]
+   #+INCLUDE: "./posts/senate-covid-relief-minimum-wage.org::*How to solve Congress's minimum wage dilemma" :lines 2-6
+   [[./posts/senate-covid-relief-minimum-wage.org][Read more...]]
+   [[./tags/politics.org][politics]]
+
+
 ** [[./posts/impeachment-clarifies-gop-position.org][What the Latest Impeachment Trial Says about the Current State of US Politics]]
    **02/27/21 Sat** \\
 On the weekend before Last, the US Senate concluded the second impeachment trial of former president Donald Trump, who had been impeached for inciting the insurrection at the US Capitol on January 6..

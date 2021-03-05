@@ -1,0 +1,19 @@
+#+SETUPFILE: ~/Meg in Progress/org-templates/level-1.org
+
+#+INCLUDE: "../src/header.html" export html
+
+
+#+TITLE: How to solve Congress's minimum wage dilemma
+#+CATEGORY: politics
+#+DATE: 2021-03-04
+#+FILENAME: senate-covid-relief-minimum-wage
+
+* How to solve Congress's minimum wage dilemma
+  **Thursday, March 04, 2021**
+
+  #+INCLUDE: "../../content/senate-covid-relief-minimum-wage.org"
+
+  /Tagged: [[../tags/politics.org][politics]]/
+
+
+  #+INCLUDE: "../src/utterances.html" export html

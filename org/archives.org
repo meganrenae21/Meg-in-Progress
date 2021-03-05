@@ -6,6 +6,8 @@
 * 2021
 ** February
 *** [[./posts/impeachment-clarifies-gop-position.org][The Latest Impeachment Trial Clarified the GOP's Position]] 02/27/21
+** March
+*** [[./posts/senate-covid-relief-minimum-wage.org][How to solve Congress's minimum wage dilemma]] 03/04/21
 
 
 * 2020

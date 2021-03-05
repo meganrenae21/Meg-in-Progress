@@ -12,5 +12,7 @@
 
 * Entries tagged politics:
 
+** [[../posts/senate-covid-relief-minimum-wage.org][How to solve Congress's minimum wage dilemma]]
+   03/04/21 Thu
 ** [[../posts/impeachment-clarifies-gop-position.org][What the Latest Impeachment Trial Says about the Current State of US Politics]]
    02/27/21 Sa

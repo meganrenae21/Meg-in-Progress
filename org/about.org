@@ -21,6 +21,10 @@ To an admiring Bog!
 
 I'm Meg, a work in progress.
 
+** My Projects
+
++ [[https://megan-zk.netlify.app][megan-zk]] - my digital garden/notebook
+
 ** Find me:
 
 + [[https://codepen.io/megan-durham][CodePen]]
@@ -28,3 +32,6 @@ I'm Meg, a work in progress.
 + [[https://github.com/meganrenae21][Github]]
 + [[https://dev.to/meganrenae21][dev.to]]
 + [[https://meganrenae21.medium.com/][Medium]]
+
+
+ 

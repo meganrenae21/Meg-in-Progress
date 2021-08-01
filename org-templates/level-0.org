@@ -6,7 +6,14 @@
 #+description:
 #+keywords:
 #+html_head: <link rel="stylesheet" type="text/css" href="css/style.css" />
-#+html_head_extra:
+#+html_head_extra: <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSP1R04SNY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MSP1R04SNY');
+</script>
 #+infojs_opt:
 #+creator: Megan Renae
 #+latex_header:
